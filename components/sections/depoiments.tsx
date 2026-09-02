@@ -74,6 +74,8 @@ export function Depoiments() {
       <div>
         <Swipper
           className={`relative ${largura < 1300 ? "w-full" : "lg:max-w-lg"} `}
+          allowTouchMove={false}
+          simulateTouch={false}
           autoplay={true}
           freeMode={{
             enabled: true,

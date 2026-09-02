@@ -22,6 +22,8 @@ interface SwipperProps {
     momentum: boolean;
   }
   speed?: number;
+  allowTouchMove?: boolean;
+  simulateTouch?: boolean;
 }
 
 export default function Swipper({
@@ -31,22 +33,27 @@ export default function Swipper({
   direction,
   autoplay,
   freeMode,
-  speed
+  speed,
+  allowTouchMove,
+  simulateTouch
 }: SwipperProps) {
   const isVertical = direction === "vertical";
 
   return (
     <Swiper
       autoplay={
-        autoplay
-          ? {
-              delay: 0,
-              disableOnInteraction: true,
-              pauseOnMouseEnter: true,
-
-            }
-          : false
-      }
+    autoplay
+      ? {
+          delay: 0,
+          disableOnInteraction: false,
+          pauseOnMouseEnter: false,
+          stopOnLastSlide: false,
+          waitForTransition: false, 
+        }
+      : false
+  }
+  allowTouchMove={allowTouchMove} // Desativa o arraste manual por toque (touch)
+  simulateTouch={simulateTouch}  // Desativa o arraste manual por clique do mouse
       speed={speed}
       direction={direction}
       modules={[Autoplay, FreeMode]}
