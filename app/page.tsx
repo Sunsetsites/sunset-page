@@ -18,7 +18,7 @@ export default function Home() {
       <Steps />
       <Depoiments />
 
-      <section className="cta-section px-4  md:px-10 2xl:px-30 text-center">
+      <section className="cta-section px-4  md:px-10 2xl:px-30 text-center md:text-start">
         <div className="container relative overflow-hidden py-28">
           <div className="cta-grid" />
           <div className="relative z-10 md:max-w-3xl">
