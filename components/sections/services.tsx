@@ -213,6 +213,7 @@ export default function Services() {
 
       <Swipper
         className="max-w-275"
+        direction="horizontal"
         breakpoints={{
           550: {
             slidesPerView: 1.5,

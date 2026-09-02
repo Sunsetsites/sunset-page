@@ -1,5 +1,7 @@
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination } from "swiper/modules";
+import { Navigation, Pagination, Autoplay, FreeMode } from "swiper/modules";
+
+import { cn } from "@/lib/utils";
 // import Swiper and modules styles
 import "swiper/css";
 import "swiper/css/navigation";
@@ -11,14 +13,50 @@ interface SwipperProps {
     [key: number]: {
       slidesPerView: number;
     };
-  }
+  };
   className?: string;
+  direction: "horizontal" | "vertical";
+  autoplay?: boolean;
+  freeMode?:{
+    enabled: boolean;
+    momentum: boolean;
+  }
+  speed?: number;
 }
 
-export default function Swipper({ children, breakpoints, className }: SwipperProps) {
+export default function Swipper({
+  children,
+  breakpoints,
+  className,
+  direction,
+  autoplay,
+  freeMode,
+  speed
+}: SwipperProps) {
+  const isVertical = direction === "vertical";
+
   return (
     <Swiper
-      className={`mt-20 w-full  px-4 ${className}`}
+      autoplay={
+        autoplay
+          ? {
+              delay: 0,
+              disableOnInteraction: true,
+              pauseOnMouseEnter: true,
+
+            }
+          : false
+      }
+      speed={speed}
+      direction={direction}
+      modules={[Autoplay, FreeMode]}
+      freeMode={freeMode}
+      className={cn(
+        
+        " swiper-continuous mt-20 w-full px-4",
+        isVertical && "h-[36rem] sm:h-[40rem] md:h-[46rem] lg:h-[52rem]",
+        className,
+      )}
       spaceBetween={10}
       slidesPerView={1.1}
       loop={true}
@@ -26,7 +64,7 @@ export default function Swipper({ children, breakpoints, className }: SwipperPro
       pagination={{ clickable: true }}
       breakpoints={breakpoints}
     >
-        {children}
+      {children}
     </Swiper>
   );
 }

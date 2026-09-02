@@ -162,4 +162,6 @@ body {
   position: relative;
   z-index: 1;
 }
-
+.swiper-continuous .swiper-wrapper {
+  transition-timing-function: linear !important;
+}
