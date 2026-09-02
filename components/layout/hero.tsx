@@ -70,9 +70,9 @@ export function Hero(){
             <button className="p-3 px-4 bg-primary-color text-white rounded-md font-medium cursor-pointer hover:shadow-2xl  transition-all duration-300">
               Comece seu projeto
             </button>
-            <button className="font-medium cursor-pointer border border-gray-400 hover:bg-primary-color hover:text-white transition-all duration-200 ease-in p-3 px-4 rounded-md hover:shadow-2xl ">
+            {/* <button className="font-medium cursor-pointer border border-gray-400 hover:bg-primary-color hover:text-white transition-all duration-200 ease-in p-3 px-4 rounded-md hover:shadow-2xl ">
               Soluções sob medida
-            </button>
+            </button> */}
           </div>
         </div>
 

@@ -86,8 +86,8 @@ export default function Services() {
     },
   ];
   return (
-    <div className="w-full  flex flex-col  justify-center  px-4 md:px-10 2xl:px-20">
-      <div className="flex items-center  gap-4 justify-center md:justify-start">
+    <div className="w-full  flex flex-col  justify-center  px-4 md:px-10 2xl:px-20 max-w-[1500px]">
+      <div className="flex items-center flex-col gap-4 ">
         <h2 className="text-3xl lg:text-4xl  lg:leading-14  font-medium text-center" >
           <ShinyText
             text="Tecnologias e Soluções"
@@ -102,19 +102,19 @@ export default function Services() {
             disabled={false}
           />
         </h2>
-        <hr className="hidden lg:flex-1 border-white/10"></hr>
-      </div>
-      <p className="max-w-4xl text-justify text-xl mt-4 font-light hidden md:block">
+       
+      <p className="max-w-2xl text-center text-gray-300 text-xl mt-4 font-light hidden md:block">
         Desenvolvemos soluções digitais sob medida que unem tecnologia e
         inovação para transformar ideias em resultados reais.
       </p>
-      <div className="mx-auto mt-20 grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4">
+      </div>
+      <div className="mx-auto mt-20 grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
         <SpotlightCard  
-          className="custom-spotlight-card group"
+          className="custom-spotlight-card group bg-white/3"
           spotlightColor="rgba(255, 255, 255, 0.2)"
         >
           <div className="relative flex flex-col gap-5">
-            <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-[#b5b5b5] text-black">
+            <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl text-white bg-white/5 group-hover:bg-primary-color transition group-hover:duration-300">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
@@ -141,30 +141,32 @@ export default function Services() {
                 <circle cx="18" cy="6" r="3" />
               </svg>
             </div>
-            <h3 className="min-h-7 text-lg font-semibold">
-              Software sob medida
-            </h3>
-            <p className="min-h-20 text-sm leading-6 text-gray-400">
-              Soluções personalizadas para atender às necessidades específicas
-              do seu negócio.
-            </p>
-            <a
-              href="#contato"
-              className="mt-4 inline-flex items-center gap-2 text-sm font-medium text-white"
-            >
-              <span className=" relative after:absolute after:-bottom-1 after:left-0 after:h-px after:w-0 after:bg-white after:transition-all after:duration-300 group-hover:after:w-full">
-                Contatar equipe
-              </span>{" "}
-              <span aria-hidden="true">↗</span>
-            </a>
+            <div className="flex flex-col gap-3 justify-center  mt-20" >
+              <h3 className="min-h-7 text-xl ">
+                Software sob medida
+              </h3>
+              <p className="min-h-20 text-sm leading-6 text-gray-400">
+                Soluções personalizadas para atender às necessidades específicas
+                do seu negócio.
+              </p>
+              <a
+                href="#contato"
+                className="items-center gap-2 text-sm font-medium text-black  bg-white p-3 px-10 mt-10 rounded-full text-center flex-1 justify-center"
+              >
+                <span className=" relative after:absolute after:-bottom-1 after:left-0 after:h-px after:w-0 after:bg-white after:transition-all after:duration-300 group-hover:after:w-full">
+                  Contatar equipe
+                </span>{" "}
+                <span aria-hidden="true">↗</span>
+              </a>
+            </div>
           </div>
         </SpotlightCard>
-        <SpotlightCard
-          className="custom-spotlight-card group"
+        <SpotlightCard  
+          className="custom-spotlight-card group bg-white/3"
           spotlightColor="rgba(255, 255, 255, 0.2)"
         >
-          <div className="relative flex min-h-64 flex-col gap-5">
-            <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-[#b5b5b5] text-black">
+          <div className="relative flex flex-col gap-5">
+            <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl text-white bg-white/5 group-hover:bg-primary-color transition group-hover:duration-300">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
@@ -175,37 +177,48 @@ export default function Services() {
                 stroke-width="2"
                 stroke-linecap="round"
                 stroke-linejoin="round"
-                className="lucide lucide-chevrons-left-right-ellipsis-icon lucide-chevrons-left-right-ellipsis"
+                className="lucide lucide-monitor-cog-icon lucide-monitor-cog"
               >
-                <path d="M12 12h.01" />
-                <path d="M16 12h.01" />
-                <path d="m17 7 5 5-5 5" />
-                <path d="m7 7-5 5 5 5" />
-                <path d="M8 12h.01" />
+                <path d="M12 17v4" />
+                <path d="m14.305 7.53.923-.382" />
+                <path d="m15.228 4.852-.923-.383" />
+                <path d="m16.852 3.228-.383-.924" />
+                <path d="m16.852 8.772-.383.923" />
+                <path d="m19.148 3.228.383-.924" />
+                <path d="m19.53 9.696-.382-.924" />
+                <path d="m20.772 4.852.924-.383" />
+                <path d="m20.772 7.148.924.383" />
+                <path d="M22 13v2a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h7" />
+                <path d="M8 21h8" />
+                <circle cx="18" cy="6" r="3" />
               </svg>
             </div>
-            <h3 className="min-h-7 text-lg font-semibold">Sistemas web</h3>
-            <p className="min-h-20 text-sm leading-6 text-gray-400">
-              Criação de plataformas, ERPs e soluções completas, do banco de
-              dados à interface.
-            </p>
-            <a
-              href="#contato"
-              className="mt-4 inline-flex items-center gap-2 text-sm font-medium text-white"
-            >
-              <span className="relative after:absolute after:-bottom-1 after:left-0 after:h-px after:w-0 after:bg-white after:transition-all after:duration-300 group-hover:after:w-full">
-                Contatar equipe
-              </span>{" "}
-              <span aria-hidden="true">↗</span>
-            </a>
+            <div className="flex flex-col gap-3 justify-center  mt-20" >
+              <h3 className="min-h-7 text-xl ">
+                Software sob medida
+              </h3>
+              <p className="min-h-20 text-sm leading-6 text-gray-400">
+                Soluções personalizadas para atender às necessidades específicas
+                do seu negócio.
+              </p>
+              <a
+                href="#contato"
+                className="items-center gap-2 text-sm font-medium text-black  bg-white p-3 px-10 mt-10 rounded-full text-center flex-1 justify-center"
+              >
+                <span className=" relative after:absolute after:-bottom-1 after:left-0 after:h-px after:w-0 after:bg-white after:transition-all after:duration-300 group-hover:after:w-full">
+                  Contatar equipe
+                </span>{" "}
+                <span aria-hidden="true">↗</span>
+              </a>
+            </div>
           </div>
         </SpotlightCard>
-        <SpotlightCard
-          className="custom-spotlight-card group"
+        <SpotlightCard  
+          className="custom-spotlight-card group bg-white/3"
           spotlightColor="rgba(255, 255, 255, 0.2)"
         >
-          <div className="relative flex min-h-64 flex-col gap-5">
-            <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-[#b5b5b5] text-black">
+          <div className="relative flex flex-col gap-5">
+            <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl text-white bg-white/5 group-hover:bg-primary-color transition group-hover:duration-300">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
@@ -216,72 +229,43 @@ export default function Services() {
                 stroke-width="2"
                 stroke-linecap="round"
                 stroke-linejoin="round"
-                className="lucide lucide-monitor-icon lucide-monitor"
+                className="lucide lucide-monitor-cog-icon lucide-monitor-cog"
               >
-                <rect width="20" height="14" x="2" y="3" rx="2" />
-                <line x1="8" x2="16" y1="21" y2="21" />
-                <line x1="12" x2="12" y1="17" y2="21" />
+                <path d="M12 17v4" />
+                <path d="m14.305 7.53.923-.382" />
+                <path d="m15.228 4.852-.923-.383" />
+                <path d="m16.852 3.228-.383-.924" />
+                <path d="m16.852 8.772-.383.923" />
+                <path d="m19.148 3.228.383-.924" />
+                <path d="m19.53 9.696-.382-.924" />
+                <path d="m20.772 4.852.924-.383" />
+                <path d="m20.772 7.148.924.383" />
+                <path d="M22 13v2a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h7" />
+                <path d="M8 21h8" />
+                <circle cx="18" cy="6" r="3" />
               </svg>
             </div>
-            <h3 className="min-h-7 text-lg font-semibold">
-              Integração de APIs
-            </h3>
-            <p className="min-h-20 text-sm leading-6 text-gray-400">
-              Criação de back-ends e conexões entre diferentes sistemas para
-              automatizar fluxos de trabalho.
-            </p>
-            <a
-              href="#contato"
-              className="mt-4 inline-flex items-center gap-2 text-sm font-medium text-white"
-            >
-              <span className="relative after:absolute after:-bottom-1 after:left-0 after:h-px after:w-0 after:bg-white after:transition-all after:duration-300 group-hover:after:w-full">
-                Contatar equipe
-              </span>{" "}
-              <span aria-hidden="true">↗</span>
-            </a>
-          </div>
-        </SpotlightCard>
-        <SpotlightCard
-          className="custom-spotlight-card group"
-          spotlightColor="rgba(255, 255, 255, 0.2)"
-        >
-          <div className="relative flex min-h-64 flex-col gap-5">
-            <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-[#b5b5b5] text-black">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                className="lucide lucide-monitor-icon lucide-monitor"
+            <div className="flex flex-col gap-3 justify-center  mt-20" >
+              <h3 className="min-h-7 text-xl ">
+                Software sob medida
+              </h3>
+              <p className="min-h-20 text-sm leading-6 text-gray-400">
+                Soluções personalizadas para atender às necessidades específicas
+                do seu negócio.
+              </p>
+              <a
+                href="#contato"
+                className="items-center gap-2 text-sm font-medium text-black  bg-white p-3 px-10 mt-10 rounded-full text-center flex-1 justify-center"
               >
-                <rect width="20" height="14" x="2" y="3" rx="2" />
-                <line x1="8" x2="16" y1="21" y2="21" />
-                <line x1="12" x2="12" y1="17" y2="21" />
-              </svg>
+                <span className=" relative after:absolute after:-bottom-1 after:left-0 after:h-px after:w-0 after:bg-white after:transition-all after:duration-300 group-hover:after:w-full">
+                  Contatar equipe
+                </span>{" "}
+                <span aria-hidden="true">↗</span>
+              </a>
             </div>
-            <h3 className="min-h-7 text-lg font-semibold">
-              Integração de APIs
-            </h3>
-            <p className="min-h-20 text-sm leading-6 text-gray-400">
-              Criação de back-ends e conexões entre diferentes sistemas para
-              automatizar fluxos de trabalho.
-            </p>
-            <a
-              href="#contato"
-              className="mt-4 inline-flex items-center gap-2 text-sm font-medium text-white"
-            >
-              <span className="relative after:absolute after:-bottom-1 after:left-0 after:h-px after:w-0 after:bg-white after:transition-all after:duration-300 group-hover:after:w-full">
-                Contatar equipe
-              </span>{" "}
-              <span aria-hidden="true">↗</span>
-            </a>
           </div>
         </SpotlightCard>
+ 
       </div>
 
       <div className="mt-20 w-full  2xl:px-10">
