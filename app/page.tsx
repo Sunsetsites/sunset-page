@@ -1,9 +1,9 @@
 "use client";
 
-import { Depoiments } from "@/components/layout/depoiments";
-import { Hero } from "@/components/layout/hero";
-import Services from "@/components/layout/services";
-import Steps from "@/components/layout/steps";
+import { Depoiments } from "@/components/sections/depoiments";
+import { Hero } from "@/components/sections/hero";
+import Services from "@/components/sections/services";
+import Steps from "@/components/sections/steps";
 import Threads from "@/components/ui/Threads";
 import { ExternalLink, MessageCircle } from "lucide-react";
 
@@ -12,7 +12,7 @@ export default function Home() {
     <main>
       {/* <Header /> */}
       <Hero />
-      <div className=" bg-black lg:[clip-path:polygon(0_0,45%_0,60%_80px,100%_80px,100%_100%,0_100%)] text-white py-20 md:py-40 justify-center flex items-center flex-col relative">
+      <div className=" bg-primary-color lg:[clip-path:polygon(0_0,45%_0,60%_80px,100%_80px,100%_100%,0_100%)] text-white py-20 md:py-40 justify-center flex items-center flex-col relative">
         <Services />
       </div>
       <Steps />

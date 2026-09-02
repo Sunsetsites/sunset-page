@@ -6,7 +6,7 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  --primary-color: #171717;
+  --primary-color: #141414;
   --background: oklch(1 0 0);
   --foreground: oklch(0.145 0 0);
   --card: oklch(1 0 0);
@@ -141,4 +141,25 @@ body {
   pointer-events: none;
 }
 
+
+.card-service {
+  position: relative;
+  background-image: url('/men.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+.card-service::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+ background: rgba(0, 0, 0, 0.8);
+}
+
+.card-service > * {
+  position: relative;
+  z-index: 1;
+}
 
