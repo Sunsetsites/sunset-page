@@ -1,11 +1,21 @@
+"use client";
+
 import { SwiperSlide } from "swiper/react";
 import ShinyText from "../ui/shiny-text";
 import SpotlightCard from "../ui/SpotlightCard";
 import Swipper from "../ui/swipper";
+import { useEffect, useState } from "react";
 
 export function Depoiments() {
-  const largura = window.innerWidth;
-  
+  const [largura, setLargura] = useState(0);
+  useEffect(() => {
+    const handleResize = () => setLargura(window.innerWidth);
+
+    handleResize(); 
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   const depoiments = [
     {
       name: "Mirian Samara",
@@ -29,7 +39,9 @@ export function Depoiments() {
     },
   ];
   return (
-    <div className={`relative overflow-hidden bg-primary-color lg:[clip-path:polygon(0_0,45%_0,60%_80px,100%_80px,100%_100%,0_100%)] text-white pt-20 md:pt-40 pb-20  flex  ${largura < 1300 ? "flex-col" : "flex-row"} justify-between mt-20 px-4 md:px-10  2xl:px-30`}>
+    <div
+      className={`relative overflow-hidden bg-primary-color lg:[clip-path:polygon(0_0,45%_0,60%_80px,100%_80px,100%_100%,0_100%)] text-white pt-20 md:pt-40 pb-20  flex  ${largura < 1300 ? "flex-col" : "flex-row"} justify-between mt-20 px-4 md:px-10  2xl:px-30`}
+    >
       <div className="relative z-10 flex gap-12  flex-col w-full justify-center md:justify-start  lg:max-w-2xl">
         <h2 className="text-3xl  md:text-4xl lg:text-6xl w-full  lg:max-w-2xl lg:leading-18 font-medium">
           <ShinyText
@@ -85,7 +97,7 @@ export function Depoiments() {
           direction={largura < 1300 ? "horizontal" : "vertical"}
         >
           {depoiments.map((depoiment, index) => (
-            <SwiperSlide key={index} h-full>
+            <SwiperSlide key={index} >
               <SpotlightCard
                 className="group rounded-2xl border border-white/10 bg-white/3 p-6 transition-all duration-300 hover:border-white/20"
                 spotlightColor="rgba(255, 255, 255, 0.12)"

@@ -5,7 +5,7 @@ import { Hero } from "@/components/sections/hero";
 import Services from "@/components/sections/services";
 import Steps from "@/components/sections/steps";
 import Threads from "@/components/ui/Threads";
-import { ExternalLink, MessageCircle } from "lucide-react";
+import { MessageCircle } from "lucide-react";
 
 export default function Home() {
   return (
