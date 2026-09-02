@@ -18,12 +18,12 @@ export default function Home() {
       <Steps />
       <Depoiments />
 
-      <section className="cta-section px-4 md:px-10 2xl:px-30">
+      <section className="cta-section px-4  md:px-10 2xl:px-30 text-center">
         <div className="container relative overflow-hidden py-28">
           <div className="cta-grid" />
           <div className="relative z-10 md:max-w-3xl">
             {/* <SectionLabel no="09">Próximo passo</SectionLabel> */}
-            <h2 className="text-4xl md:text-8xl  md:leading-24 tracking-[-0.08em]">
+            <h2 className="text-3xl md:text-8xl  md:leading-24 tracking-[-0.08em]">
               Pronto para colocar sua empresa na internet?
             </h2>
             <p className="mt-8 max-w-md text-lg leading-8 text-navy/60">
@@ -32,11 +32,11 @@ export default function Home() {
             </p>
             <a
                 href={"https://api.whatsapp.com/send?phone=5511999999999&text=Ol%C3%A1%2C%20gostaria%20de%20solicitar%20um%20site."}
-                className="mt-9 inline-flex items-center gap-3 rounded-full bg-primary-color !text-white px-7 py-4 text-sm font-bold transition hover:-translate-y-1 hover:bg-cobalt"
+                className="mt-9 inline-flex items-center gap-3 rounded-full bg-primary-color text-white px-7 py-4 text-sm font-bold transition hover:-translate-y-1 hover:bg-cobalt"
               >
                 Contatar Equipe <MessageCircle size={17} />
               </a>
-            <a className="mt-9 inline-flex items-center gap-3 rounded-full bg-navy !text-white px-7 py-4 text-sm font-bold transition hover:-translate-y-1 hover:bg-cobalt"></a>
+           
           </div>
         </div>
          <div className=" absolute mt-100 inset-0 ">
