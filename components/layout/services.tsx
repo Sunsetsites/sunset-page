@@ -87,8 +87,8 @@ export default function Services() {
   ];
   return (
     <div className="w-full  flex flex-col  justify-center  px-4 md:px-10 2xl:px-20">
-      <div className="flex items-center  gap-4">
-        <h2 className="text-4xl  leading-14  font-medium">
+      <div className="flex items-center  gap-4 justify-center md:justify-start">
+        <h2 className="text-3xl lg:text-4xl  lg:leading-14  font-medium text-center" >
           <ShinyText
             text="Tecnologias e Soluções"
             speed={2}
@@ -102,7 +102,7 @@ export default function Services() {
             disabled={false}
           />
         </h2>
-        <hr className="flex-1 border-white/10"></hr>
+        <hr className="hidden lg:flex-1 border-white/10"></hr>
       </div>
       <p className="max-w-4xl text-justify text-xl mt-4 font-light hidden md:block">
         Desenvolvemos soluções digitais sob medida que unem tecnologia e

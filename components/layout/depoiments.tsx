@@ -4,9 +4,9 @@ import Threads from "../ui/Threads";
 
 export function Depoiments() {
   return (
-    <div className="relative overflow-hidden bg-black [clip-path:polygon(0_0,45%_0,60%_80px,100%_80px,100%_100%,0_100%)] text-white pt-40 pb-20  flex flex-col lg:flex-row justify-between mt-20 px-4 md:px-10 lg:px-30 relative">
-      <div className="relative z-10 flex gap-12  flex-col w-full  lg:max-w-2xl">
-        <h2 className="text-4xl lg:text-6xl w-full  lg:max-w-2xl lg:leading-18 font-medium">
+    <div className="relative overflow-hidden bg-black lg:[clip-path:polygon(0_0,45%_0,60%_80px,100%_80px,100%_100%,0_100%)] text-white pt-40 pb-20  flex flex-col lg:flex-row justify-between mt-20 px-4 md:px-10 lg:px-30 relative">
+      <div className="relative z-10 flex gap-12  flex-col w-full justify-center md:justify-start  lg:max-w-2xl">
+        <h2 className="text-3xl  md:text-4xl lg:text-6xl w-full  lg:max-w-2xl lg:leading-18 font-medium">
           <ShinyText
             text="Resultados que vão além do código"
             speed={2}

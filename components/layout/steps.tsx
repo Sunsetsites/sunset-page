@@ -3,8 +3,8 @@ import ShinyText from "../ui/shiny-text";
 export default function Steps() {
   return (
     <section className="flex flex-col  w-full gap-4 py-40 px-4 md:px-10 2xl:px-20">
-      <div className="flex items-center gap-20 justify-center">
-        <h2 className="text-4xl  font-medium ">
+      <div className="flex items-center gap-20 justify-center md:justify-start">
+        <h2 className="text-3xl md:text-4xl  font-medium text-center ">
           <ShinyText
             text="Da ideia ao software pronto"
             speed={6}
@@ -18,7 +18,7 @@ export default function Steps() {
             disabled={false}
           />
         </h2>
-        <hr className="flex-1 border-black/10"></hr>
+        <hr className="hidden md:flex-1 border-black/10"></hr>
       </div>
       <p className=" max-w-4xl text-justify text-xl hidden lg:block">
         Planejamos, desenvolvemos e entregamos soluções digitais sob medida, do

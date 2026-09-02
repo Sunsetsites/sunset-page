@@ -59,13 +59,12 @@ export function Hero(){
               animateOn="view"
             />
           </p>
-          <h1 className="text-6xl uppercase max-w-6xl leading-20 text-center ">
+          <h1 className="text-4xl md:text-6xl uppercase max-w-6xl  md:leading-20 text-center ">
             Soluções digitais para negócios modernos.
           </h1>
-          <p className="text-base max-w-3xl text-center  text-gray-700">
+          <p className="text-base max-w-3xl text-center  text-gray-700 px-10">
             Criamos softwares, aplicativos e experiências digitais sob medida
-            para empresas que buscam inovação, eficiência e crescimento em um
-            mundo cada vez mais conectado. .
+            para empresas que buscam inovação.
           </p>
           <div className="flex items-center justify-center gap-10 mt-4  text-sm">
             <button className="p-3 px-4 bg-primary-color text-white rounded-md font-medium cursor-pointer hover:shadow-2xl  transition-all duration-300">
