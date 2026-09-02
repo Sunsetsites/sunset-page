@@ -2,12 +2,8 @@ import { title } from "process";
 import LogoLoop from "../ui/LogoLoop";
 import ShinyText from "../ui/shiny-text";
 import SpotlightCard from "../ui/SpotlightCard";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination } from "swiper/modules";
-// import Swiper and modules styles
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
+import Swipper from "../ui/swipper";
+import { SwiperSlide } from "swiper/react";
 
 export default function Services() {
   const tecnologias = [
@@ -209,27 +205,22 @@ export default function Services() {
           />
         </h2>
 
-        <p className="max-w-2xl text-center text-gray-300 text-xl mt-4 font-light ">
+        <p className="max-w-2xl text-center text-gray-300 text-sm md:text-xl mt-4 font-light ">
           Desenvolvemos soluções digitais sob medida que unem tecnologia e
           inovação para transformar ideias em resultados reais.
         </p>
       </div>
-      <Swiper
-        className="mt-20 w-full max-w-[1100px] px-4"
-     
-        spaceBetween={10}
-        slidesPerView={1.1}
-        loop={true}
-        navigation
-        pagination={{ clickable: true }}
+
+      <Swipper
+        className="max-w-275"
         breakpoints={{
-          550:{
+          550: {
             slidesPerView: 1.5,
           },
           640: {
-            slidesPerView:2,
+            slidesPerView: 2,
           },
-          692:{
+          692: {
             slidesPerView: 2.2,
           },
           // 768: {
@@ -243,7 +234,7 @@ export default function Services() {
         {serviceCards.map((card, index) => (
           <SwiperSlide key={index} className="h-auto">
             <SpotlightCard
-             className="group card-service !h-[390px] md:!h-[480px] bg-white/3"
+              className="group card-service !h-[390px] md:!h-[480px] bg-white/3"
               spotlightColor="rgba(255, 255, 255, 0.2)"
             >
               <div className="relative flex  flex-col gap-5">
@@ -270,8 +261,7 @@ export default function Services() {
             </SpotlightCard>
           </SwiperSlide>
         ))}
-      </Swiper>
-    
+      </Swipper>
 
       <div className="mt-20 w-full  2xl:px-10">
         <LogoLoop

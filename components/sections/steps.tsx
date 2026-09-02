@@ -1,4 +1,6 @@
+import { SwiperSlide } from "swiper/react";
 import ShinyText from "../ui/shiny-text";
+import Swipper from "../ui/swipper";
 
 export default function Steps() {
   const steps = [
@@ -108,8 +110,28 @@ export default function Steps() {
         </p>
       </div>
 
-      <div className="max-w-7xl lg:mt-30  grid md:grid-cols-4   2xl:mx-auto  rounded-2xl ">
-        {steps.map((step, index) => (
+      <div className="max-w-7xl lg:mt-10   2xl:mx-auto  rounded-2xl ">
+        <Swipper
+        breakpoints={{
+           550: {
+          slidesPerView: 1.5,
+        },
+        640: {
+          slidesPerView: 2,
+        },
+        692: {
+          slidesPerView: 2.2,
+        },
+        768: {
+          slidesPerView: 2.2,
+        },
+        1024: {
+          slidesPerView: 4,
+        },
+        }}
+        >
+     {steps.map((step, index) => (
+        <SwiperSlide key={index} className="h-auto">
           <div className="flex h-full flex-col justify-between gap-10 border-t border-b lg:border-b-0  border-r border-gray-200 p-10 group">
             <span className="text-gray-200 text-3xl font-medium group-hover:text-primary-color transition group-hover:duration-300">
               {index < 9 ? `0${index + 1}` : index + 1}
@@ -124,7 +146,9 @@ export default function Steps() {
             </div>
             {step.icon}
           </div>
-        ))}
+        </SwiperSlide>
+      ))}
+       </Swipper>
       </div>
 
     </section>
