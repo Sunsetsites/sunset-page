@@ -17,10 +17,10 @@ interface SwipperProps {
   className?: string;
   direction: "horizontal" | "vertical";
   autoplay?: boolean;
-  freeMode?:{
+  freeMode?: {
     enabled: boolean;
     momentum: boolean;
-  }
+  };
   speed?: number;
   allowTouchMove?: boolean;
   simulateTouch?: boolean;
@@ -35,31 +35,29 @@ export default function Swipper({
   freeMode,
   speed,
   allowTouchMove,
-  simulateTouch
+  simulateTouch,
 }: SwipperProps) {
   const isVertical = direction === "vertical";
 
   return (
     <Swiper
       autoplay={
-    autoplay
-      ? {
-          delay: 0,
-          disableOnInteraction: false,
-          pauseOnMouseEnter: false,
-          stopOnLastSlide: false,
-          waitForTransition: false, 
-        }
-      : false
-  }
-  allowTouchMove={allowTouchMove} // Desativa o arraste manual por toque (touch)
-  simulateTouch={simulateTouch}  // Desativa o arraste manual por clique do mouse
+        autoplay
+          ? {
+              delay: 0,
+              disableOnInteraction: false,
+              pauseOnMouseEnter: false,
+          
+            }
+          : false
+      }
+      allowTouchMove={allowTouchMove} // Desativa o arraste manual por toque (touch)
+      simulateTouch={simulateTouch} // Desativa o arraste manual por clique do mouse
       speed={speed}
       direction={direction}
       modules={[Autoplay, FreeMode]}
       freeMode={freeMode}
       className={cn(
-        
         " swiper-continuous mt-20 w-full px-4",
         isVertical && "h-[36rem] sm:h-[40rem] md:h-[46rem] lg:h-[52rem]",
         className,
