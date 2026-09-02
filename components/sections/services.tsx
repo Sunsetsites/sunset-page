@@ -243,7 +243,7 @@ export default function Services() {
         {serviceCards.map((card, index) => (
           <SwiperSlide key={index} className="h-auto">
             <SpotlightCard
-              className="custom-spotlight-card group card-service bg-white/3 "
+             className="group card-service !h-[390px] md:!h-[480px] bg-white/3"
               spotlightColor="rgba(255, 255, 255, 0.2)"
             >
               <div className="relative flex  flex-col gap-5">
@@ -251,7 +251,7 @@ export default function Services() {
                   {card.icon}
                 </div>
 
-                <div className="mt-25 flex flex-col justify-center gap-3">
+                <div className="md:mt-25 mt-10 flex flex-col justify-center gap-3">
                   <h3 className="text-xl font-bold">{card.title}</h3>
 
                   <p className="text-sm leading-6 text-gray-400">
