@@ -57,9 +57,9 @@ export function Depoiments() {
             disabled={false}
           />
         </h2>
-        <hr className="border-white/10"></hr>
+        <hr className="border-white/10 hidden md:block"></hr>
 
-        <p className="text-gray-400 max-w-2xl  lg:block">
+        <p className="text-gray-400 max-w-2xl text-center md:text-start  lg:block">
           A experiência de quem confiou em nosso trabalho para transformar
           ideias em soluções digitais.{" "}
           <span className="hidden md:block">
