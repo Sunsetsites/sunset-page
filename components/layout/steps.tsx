@@ -2,7 +2,7 @@ import ShinyText from "../ui/shiny-text";
 
 export default function Steps() {
   return (
-    <section className="flex flex-col  w-full gap-4 py-40 px-4 md:px-10 2xl:px-20">
+    <section className="flex flex-col  w-full gap-4 py-20 md:py-40 px-4 md:px-10 2xl:px-20">
       <div className="flex items-center gap-20 justify-center md:justify-start">
         <h2 className="text-3xl md:text-4xl  font-medium text-center ">
           <ShinyText
