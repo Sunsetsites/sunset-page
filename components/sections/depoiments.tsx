@@ -11,7 +11,7 @@ export function Depoiments() {
   useEffect(() => {
     const handleResize = () => setLargura(window.innerWidth);
 
-    handleResize(); 
+    handleResize();
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
@@ -43,7 +43,7 @@ export function Depoiments() {
       className={`relative overflow-hidden bg-primary-color lg:[clip-path:polygon(0_0,45%_0,60%_80px,100%_80px,100%_100%,0_100%)] text-white pt-20 md:pt-40 pb-20  flex  ${largura < 1300 ? "flex-col" : "flex-row"} justify-between mt-20 px-4 md:px-10  2xl:px-30`}
     >
       <div className="relative z-10 flex gap-12  flex-col w-full justify-center md:justify-start  lg:max-w-2xl">
-        <h2 className="text-3xl  md:text-4xl lg:text-6xl w-full  lg:max-w-2xl lg:leading-18 font-medium">
+        <h2 className="text-3xl  text-center md:text-start md:text-4xl lg:text-6xl w-full  lg:max-w-2xl lg:leading-18 font-medium">
           <ShinyText
             text="Resultados que vão além do código"
             speed={2}
@@ -59,11 +59,14 @@ export function Depoiments() {
         </h2>
         <hr className="border-white/10"></hr>
 
-        <p className="text-gray-400 max-w-2xl hidden lg:block">
+        <p className="text-gray-400 max-w-2xl  lg:block">
           A experiência de quem confiou em nosso trabalho para transformar
-          ideias em soluções digitais. Histórias reais de clientes que
-          encontraram na tecnologia uma forma de evoluir seus processos,
-          fortalecer seus negócios e alcançar novos resultados.
+          ideias em soluções digitais.{" "}
+          <span className="hidden md:block">
+            Histórias reais de clientes que encontraram na tecnologia uma forma
+            de evoluir seus processos, fortalecer seus negócios e alcançar novos
+            resultados.
+          </span>
         </p>
         <div className="absolute bottom-40 left-50 z-10 flex gap-4 before:absolute before:inset-0 before:m-auto before:h-90 before:w-90 before:rounded-full before:bg-white/4 before:blur-3xl before:-z-10 "></div>
       </div>
@@ -97,7 +100,7 @@ export function Depoiments() {
           direction={largura < 1300 ? "horizontal" : "vertical"}
         >
           {depoiments.map((depoiment, index) => (
-            <SwiperSlide key={index} >
+            <SwiperSlide key={index}>
               <SpotlightCard
                 className="group rounded-2xl border border-white/10 bg-white/3 p-6 transition-all duration-300 hover:border-white/20"
                 spotlightColor="rgba(255, 255, 255, 0.12)"
