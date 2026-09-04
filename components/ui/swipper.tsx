@@ -25,6 +25,7 @@ interface SwipperProps {
   speed?: number;
   allowTouchMove?: boolean;
   simulateTouch?: boolean;
+  pagination?: boolean;
 }
 
 export default function Swipper({
@@ -38,6 +39,7 @@ export default function Swipper({
   speed,
   allowTouchMove,
   simulateTouch,
+  pagination = false,
 }: SwipperProps) {
   const isVertical = direction === "vertical";
 
@@ -58,7 +60,7 @@ export default function Swipper({
       preventInteractionOnTransition={true}
       speed={speed}
       direction={direction}
-      modules={[Autoplay, FreeMode]}
+      modules={[Autoplay, FreeMode,Pagination]}
       freeMode={freeMode}
       className={cn(
         " swiper-continuous mt-20 w-full px-4",
@@ -69,7 +71,7 @@ export default function Swipper({
       slidesPerView={1.1}
       loop={loop}
       navigation
-      pagination={{ clickable: true }}
+      pagination={pagination ? { clickable: true } : undefined}
       breakpoints={breakpoints}
     >
       {children}

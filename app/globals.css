@@ -180,3 +180,38 @@ body {
 .swiper-continuous .swiper-wrapper {
   transition-timing-function: linear !important;
 }
+
+.swiper-continuous .swiper-pagination {
+  position: relative;
+  inset: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  margin-top: 1.5rem;
+}
+
+.swiper-continuous .swiper-pagination-bullet {
+  width: 0.45rem;
+  height: 0.45rem;
+  margin: 0 !important;
+  border-radius: 999px;
+  background: currentColor;
+  opacity: 0.2;
+  transition: width 220ms ease, opacity 220ms ease, transform 220ms ease;
+}
+
+.swiper-continuous .swiper-pagination-bullet-active {
+  width: 2rem;
+  opacity: 0.9;
+  transform: scaleY(1.15);
+}
+
+.swiper-continuous .swiper-pagination-bullet:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 4px;
+}
+
+.swiper-continuous .swiper-pagination-bullet:hover {
+  opacity: 0.65;
+}

@@ -5,11 +5,11 @@ import SpotlightCard from "../ui/SpotlightCard";
 import Swipper from "../ui/swipper";
 import { SwiperSlide } from "swiper/react";
 import DecryptedText from "../ui/descript-text";
-import { Lottie } from "../lottie";
-import { useRef } from "react";
+
+
 
 export default function Services() {
-  const touch = useRef<HTMLDivElement>(null);
+
 
   const tecnologias = [
     {
@@ -121,14 +121,7 @@ export default function Services() {
     },
   ];
 
-  const handleTouch = (event: React.PointerEvent) => {
-    if (event.pointerType === "touch") {
-    
-      if (touch.current) {
-        touch.current.style.opacity = "0";
-      }
-    }
-  };
+ 
   return (
     <div className="relative w-full flex flex-col px-4 md:px-10 2xl:px-20 max-w-[1700px]">
       <div className="flex  flex-col gap-4 ">
@@ -169,16 +162,12 @@ export default function Services() {
           inovação para transformar ideias em resultados reais.
         </p>
       </div>
-      <div
-        ref={touch}
-        className="pointer-events-none absolute -right-10 bottom-2 z-10 block w-40 -translate-y-1/2 sm:right-4 md:right-10 lg:w-52 2xl:right-20 xl:hidden"
-      >
-        <Lottie />
-      </div>
-      <div onPointerDown={handleTouch}>
+     
+      <div >
         <Swipper
           loop={false}
           direction="horizontal"
+          pagination
           breakpoints={{
             550: {
               slidesPerView: 1.5,

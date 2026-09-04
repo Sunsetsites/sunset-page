@@ -133,6 +133,7 @@ export default function Steps() {
       <div className="max-w-7xl lg:mt-10   2xl:mx-auto  rounded-2xl ">
         <Swipper
           direction="horizontal"
+          pagination
           breakpoints={{
             550: {
               slidesPerView: 1.5,
