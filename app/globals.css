@@ -71,6 +71,7 @@ body {
 .cta-section {
   position: relative;
   background: white;
+  
 }
 .cta-section::after {
   content: "↗";

@@ -5,8 +5,12 @@ import SpotlightCard from "../ui/SpotlightCard";
 import Swipper from "../ui/swipper";
 import { SwiperSlide } from "swiper/react";
 import DecryptedText from "../ui/descript-text";
+import { Lottie } from "../lottie";
+import { useRef } from "react";
 
 export default function Services() {
+  const touch = useRef<HTMLDivElement>(null);
+
   const tecnologias = [
     {
       src: "https://cdn.simpleicons.org/react/ffffff",
@@ -116,8 +120,17 @@ export default function Services() {
       icon: <Code2 size={24} strokeWidth={1.8} />,
     },
   ];
+
+  const handleTouch = (event: React.PointerEvent) => {
+    if (event.pointerType === "touch") {
+    
+      if (touch.current) {
+        touch.current.style.display = "none";
+      }
+    }
+  };
   return (
-    <div className="w-full  flex flex-col   px-4 md:px-10 2xl:px-20 max-w-[1700px]">
+    <div className="relative w-full flex flex-col px-4 md:px-10 2xl:px-20 max-w-[1700px]">
       <div className="flex  flex-col gap-4 ">
         <p className="uppercase tracking-widest 2 ml-2 text-xs text-center md:text-start">
           <DecryptedText
@@ -148,7 +161,7 @@ export default function Services() {
             />
           </h2>
 
-        <hr className="flex-1 border-white/10 hidden md:block" />
+          <hr className="flex-1 border-white/10 hidden md:block" />
         </div>
 
         <p className="max-w-xl  text-center md:text-start text-gray-300 text-sm md:text-base  font-light ">
@@ -156,59 +169,65 @@ export default function Services() {
           inovação para transformar ideias em resultados reais.
         </p>
       </div>
-
-      <Swipper
-        className=""
-        direction="horizontal"
-        breakpoints={{
-          550: {
-            slidesPerView: 1.5,
-          },
-          640: {
-            slidesPerView: 2,
-          },
-          692: {
-            slidesPerView: 2,
-          },
-          768: {
-            slidesPerView: 2.6,
-          },
-          1024: {
-            slidesPerView: 4,
-          },
-        }}
+      <div
+        ref={touch}
+        className="pointer-events-none absolute -right-10 bottom-2 z-10 block w-40 -translate-y-1/2 sm:right-4 md:right-10 lg:w-52 2xl:right-20 xl:hidden"
       >
-        {serviceCards.map((card, index) => (
-          <SwiperSlide key={index} className={`h-auto slide-${index}`}>
-            <SpotlightCard  
-              className="group card-service !h-[390px] md:!h-[480px] bg-white/3 "
-              spotlightColor="rgba(255, 255, 255, 0.2)"
-            >
-              <div className=" flex  flex-col gap-5 justify-between h-full">
-                <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-white/5 text-white transition group-hover:bg-primary-color group-hover:duration-300">
-                  {card.icon}
+        <Lottie />
+      </div>
+      <div onPointerDown={handleTouch}>
+        <Swipper
+          loop={false}
+          direction="horizontal"
+          breakpoints={{
+            550: {
+              slidesPerView: 1.5,
+            },
+            640: {
+              slidesPerView: 2,
+            },
+            692: {
+              slidesPerView: 2,
+            },
+            768: {
+              slidesPerView: 2.3,
+            },
+            1024: {
+              slidesPerView: 4,
+            },
+          }}
+        >
+          {serviceCards.map((card, index) => (
+            <SwiperSlide key={index} className={`h-auto slide-${index}`}>
+              <SpotlightCard
+                className="group card-service !h-[390px] md:!h-[480px] bg-white/3 "
+                spotlightColor="rgba(255, 255, 255, 0.2)"
+              >
+                <div className=" flex  flex-col gap-5 justify-between h-full">
+                  <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-white/5 text-white transition group-hover:bg-primary-color group-hover:duration-300">
+                    {card.icon}
+                  </div>
+                  <div className="flex flex-col justify-center gap-3">
+                    <h3 className="text-lg font-medium uppercase">
+                      {card.title}
+                    </h3>
+                    <p className="2xl:h-6 md:h-14 h-10 text-xs leading-5 text-gray-400">
+                      {card.description}
+                    </p>
+                    <a
+                      href="#contato"
+                      className="mt-10 flex flex-1 items-center justify-center gap-2 rounded-full bg-white p-3 px-10 text-center text-sm font-medium text-black"
+                    >
+                      <span>Contatar equipe</span>
+                      <span aria-hidden="true">↗</span>
+                    </a>
+                  </div>
                 </div>
-
-                <div className="flex flex-col justify-center gap-3">
-                  <h3 className="text-lg font-medium uppercase">{card.title}</h3>
-
-                  <p className="2xl:h-6 md:h-14 h-10 text-xs leading-5 text-gray-400">
-                    {card.description}
-                  </p>
-
-                  <a
-                    href="#contato"
-                    className="mt-10 flex flex-1 items-center justify-center gap-2 rounded-full bg-white p-3 px-10 text-center text-sm font-medium text-black"
-                  >
-                    <span>Contatar equipe</span>
-                    <span aria-hidden="true">↗</span>
-                  </a>
-                </div>
-              </div>
-            </SpotlightCard>
-          </SwiperSlide>
-        ))}
-      </Swipper>
+              </SpotlightCard>
+            </SwiperSlide>
+          ))}
+        </Swipper>
+      </div>
 
       <div className="mt-20 w-full  2xl:px-10">
         <LogoLoop

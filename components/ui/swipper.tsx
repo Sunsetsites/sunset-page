@@ -14,6 +14,7 @@ interface SwipperProps {
       slidesPerView: number;
     };
   };
+  loop?: boolean;
   className?: string;
   direction: "horizontal" | "vertical";
   autoplay?: boolean;
@@ -29,6 +30,7 @@ interface SwipperProps {
 export default function Swipper({
   children,
   breakpoints,
+  loop,
   className,
   direction,
   autoplay,
@@ -65,7 +67,7 @@ export default function Swipper({
       )}
       spaceBetween={10}
       slidesPerView={1.1}
-      loop={true}
+      loop={loop}
       navigation
       pagination={{ clickable: true }}
       breakpoints={breakpoints}
