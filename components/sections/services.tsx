@@ -1,4 +1,4 @@
-import { title } from "process";
+import { Code2, Monitor, ShoppingCart, Smartphone } from "lucide-react";
 import LogoLoop from "../ui/LogoLoop";
 import ShinyText from "../ui/shiny-text";
 import SpotlightCard from "../ui/SpotlightCard";
@@ -92,132 +92,28 @@ export default function Services() {
 
   const serviceCards = [
     {
-      title: "Software sob medida",
+      title: "Landing pages",
       description:
-        "Soluções personalizadas para atender às necessidades específicas do seu negócio.",
-      icon: (
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="2"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          className="lucide lucide-monitor-cog-icon lucide-monitor-cog"
-        >
-          <path d="M12 17v4" />
-          <path d="m14.305 7.53.923-.382" />
-          <path d="m15.228 4.852-.923-.383" />
-          <path d="m16.852 3.228-.383-.924" />
-          <path d="m16.852 8.772-.383.923" />
-          <path d="m19.148 3.228.383-.924" />
-          <path d="m19.53 9.696-.382-.924" />
-          <path d="m20.772 4.852.924-.383" />
-          <path d="m20.772 7.148.924.383" />
-          <path d="M22 13v2a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h7" />
-          <path d="M8 21h8" />
-          <circle cx="18" cy="6" r="3" />
-        </svg>
-      ),
+        "Páginas de alta conversão para apresentar sua marca, oferta e gerar novas oportunidades.",
+      icon: <Monitor size={24} strokeWidth={1.8} />,
+    },
+    {
+      title: "Sites mobile-first",
+      description:
+        "Experiências rápidas e responsivas, pensadas primeiro para a rotina de quem acessa pelo celular.",
+      icon: <Smartphone size={24} strokeWidth={1.8} />,
+    },
+    {
+      title: "E-commerce",
+      description:
+        "Lojas virtuais completas para vender melhor, com catálogo, checkout e uma jornada simples.",
+      icon: <ShoppingCart size={24} strokeWidth={1.8} />,
     },
     {
       title: "Software sob medida",
       description:
-        "Soluções personalizadas para atender às necessidades específicas do seu negócio.",
-      icon: (
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="2"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          className="lucide lucide-monitor-cog-icon lucide-monitor-cog"
-        >
-          <path d="M12 17v4" />
-          <path d="m14.305 7.53.923-.382" />
-          <path d="m15.228 4.852-.923-.383" />
-          <path d="m16.852 3.228-.383-.924" />
-          <path d="m16.852 8.772-.383.923" />
-          <path d="m19.148 3.228.383-.924" />
-          <path d="m19.53 9.696-.382-.924" />
-          <path d="m20.772 4.852.924-.383" />
-          <path d="m20.772 7.148.924.383" />
-          <path d="M22 13v2a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h7" />
-          <path d="M8 21h8" />
-          <circle cx="18" cy="6" r="3" />
-        </svg>
-      ),
-    },
-    {
-      title: "Software sob medida",
-      description:
-        "Soluções personalizadas para atender às necessidades específicas do seu negócio.",
-      icon: (
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="2"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          className="lucide lucide-monitor-cog-icon lucide-monitor-cog"
-        >
-          <path d="M12 17v4" />
-          <path d="m14.305 7.53.923-.382" />
-          <path d="m15.228 4.852-.923-.383" />
-          <path d="m16.852 3.228-.383-.924" />
-          <path d="m16.852 8.772-.383.923" />
-          <path d="m19.148 3.228.383-.924" />
-          <path d="m19.53 9.696-.382-.924" />
-          <path d="m20.772 4.852.924-.383" />
-          <path d="m20.772 7.148.924.383" />
-          <path d="M22 13v2a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h7" />
-          <path d="M8 21h8" />
-          <circle cx="18" cy="6" r="3" />
-        </svg>
-      ),
-    },
-    {
-      title: "Software sob medida",
-      description:
-        "Soluções personalizadas para atender às necessidades específicas do seu negócio.",
-      icon: (
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="2"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          className="lucide lucide-monitor-cog-icon lucide-monitor-cog"
-        >
-          <path d="M12 17v4" />
-          <path d="m14.305 7.53.923-.382" />
-          <path d="m15.228 4.852-.923-.383" />
-          <path d="m16.852 3.228-.383-.924" />
-          <path d="m16.852 8.772-.383.923" />
-          <path d="m19.148 3.228.383-.924" />
-          <path d="m19.53 9.696-.382-.924" />
-          <path d="m20.772 4.852.924-.383" />
-          <path d="m20.772 7.148.924.383" />
-          <path d="M22 13v2a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h7" />
-          <path d="M8 21h8" />
-          <circle cx="18" cy="6" r="3" />
-        </svg>
-      ),
+        "Soluções digitais personalizadas para organizar processos e fazer seu negócio crescer.",
+      icon: <Code2 size={24} strokeWidth={1.8} />,
     },
   ];
   return (
@@ -272,11 +168,11 @@ export default function Services() {
             slidesPerView: 2,
           },
           692: {
-            slidesPerView: 2.2,
+            slidesPerView: 2,
           },
-          // 768: {
-          //   slidesPerView: 2.5,
-          // },
+          768: {
+            slidesPerView: 2.6,
+          },
           1024: {
             slidesPerView: 4,
           },
@@ -285,18 +181,18 @@ export default function Services() {
         {serviceCards.map((card, index) => (
           <SwiperSlide key={index} className="h-auto">
             <SpotlightCard
-              className="group card-service !h-[390px] md:!h-[480px] bg-white/3"
+              className="group card-service !h-[390px] md:!h-[480px] bg-white/3 "
               spotlightColor="rgba(255, 255, 255, 0.2)"
             >
-              <div className="relative flex  flex-col gap-5">
+              <div className=" flex  flex-col gap-5 justify-between h-full">
                 <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-white/5 text-white transition group-hover:bg-primary-color group-hover:duration-300">
                   {card.icon}
                 </div>
 
-                <div className="md:mt-25 mt-10 flex flex-col justify-center gap-3">
-                  <h3 className="text-xl font-medium uppercase">{card.title}</h3>
+                <div className="flex flex-col justify-center gap-3">
+                  <h3 className="text-lg font-medium uppercase">{card.title}</h3>
 
-                  <p className="text-sm leading-6 text-gray-400">
+                  <p className="2xl:h-6 md:h-14 h-10 text-xs leading-5 text-gray-400">
                     {card.description}
                   </p>
 
