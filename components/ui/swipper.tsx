@@ -53,6 +53,7 @@ export default function Swipper({
       }
       allowTouchMove={allowTouchMove} // Desativa o arraste manual por toque (touch)
       simulateTouch={simulateTouch} // Desativa o arraste manual por clique do mouse
+      preventInteractionOnTransition={true}
       speed={speed}
       direction={direction}
       modules={[Autoplay, FreeMode]}

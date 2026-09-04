@@ -4,6 +4,7 @@ import ShinyText from "../ui/shiny-text";
 import SpotlightCard from "../ui/SpotlightCard";
 import Swipper from "../ui/swipper";
 import { SwiperSlide } from "swiper/react";
+import DecryptedText from "../ui/descript-text";
 
 export default function Services() {
   const tecnologias = [
@@ -89,130 +90,179 @@ export default function Services() {
     },
   ];
 
-const serviceCards = [
-  {
-    title: "Software sob medida",
-    description:
-      "Soluções personalizadas para atender às necessidades específicas do seu negócio.",
-    icon: (
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="24"
-        height="24"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        className="lucide lucide-monitor-cog-icon lucide-monitor-cog"
-      >
-        <path d="M12 17v4" />
-        <path d="m14.305 7.53.923-.382" />
-        <path d="m15.228 4.852-.923-.383" />
-        <path d="m16.852 3.228-.383-.924" />
-        <path d="m16.852 8.772-.383.923" />
-        <path d="m19.148 3.228.383-.924" />
-        <path d="m19.53 9.696-.382-.924" />
-        <path d="m20.772 4.852.924-.383" />
-        <path d="m20.772 7.148.924.383" />
-        <path d="M22 13v2a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h7" />
-        <path d="M8 21h8" />
-        <circle cx="18" cy="6" r="3" />
-      </svg>
-    ),
-  },
-  {
-    title: "Software sob medida",
-    description:
-      "Soluções personalizadas para atender às necessidades específicas do seu negócio.",
-    icon: (
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="24"
-        height="24"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        className="lucide lucide-monitor-cog-icon lucide-monitor-cog"
-      >
-        <path d="M12 17v4" />
-        <path d="m14.305 7.53.923-.382" />
-        <path d="m15.228 4.852-.923-.383" />
-        <path d="m16.852 3.228-.383-.924" />
-        <path d="m16.852 8.772-.383.923" />
-        <path d="m19.148 3.228.383-.924" />
-        <path d="m19.53 9.696-.382-.924" />
-        <path d="m20.772 4.852.924-.383" />
-        <path d="m20.772 7.148.924.383" />
-        <path d="M22 13v2a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h7" />
-        <path d="M8 21h8" />
-        <circle cx="18" cy="6" r="3" />
-      </svg>
-    ),
-  },
-  {
-    title: "Software sob medida",
-    description:
-      "Soluções personalizadas para atender às necessidades específicas do seu negócio.",
-    icon: (
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="24"
-        height="24"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        className="lucide lucide-monitor-cog-icon lucide-monitor-cog"
-      >
-        <path d="M12 17v4" />
-        <path d="m14.305 7.53.923-.382" />
-        <path d="m15.228 4.852-.923-.383" />
-        <path d="m16.852 3.228-.383-.924" />
-        <path d="m16.852 8.772-.383.923" />
-        <path d="m19.148 3.228.383-.924" />
-        <path d="m19.53 9.696-.382-.924" />
-        <path d="m20.772 4.852.924-.383" />
-        <path d="m20.772 7.148.924.383" />
-        <path d="M22 13v2a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h7" />
-        <path d="M8 21h8" />
-        <circle cx="18" cy="6" r="3" />
-      </svg>
-    ),
-  },
-];
+  const serviceCards = [
+    {
+      title: "Software sob medida",
+      description:
+        "Soluções personalizadas para atender às necessidades específicas do seu negócio.",
+      icon: (
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          className="lucide lucide-monitor-cog-icon lucide-monitor-cog"
+        >
+          <path d="M12 17v4" />
+          <path d="m14.305 7.53.923-.382" />
+          <path d="m15.228 4.852-.923-.383" />
+          <path d="m16.852 3.228-.383-.924" />
+          <path d="m16.852 8.772-.383.923" />
+          <path d="m19.148 3.228.383-.924" />
+          <path d="m19.53 9.696-.382-.924" />
+          <path d="m20.772 4.852.924-.383" />
+          <path d="m20.772 7.148.924.383" />
+          <path d="M22 13v2a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h7" />
+          <path d="M8 21h8" />
+          <circle cx="18" cy="6" r="3" />
+        </svg>
+      ),
+    },
+    {
+      title: "Software sob medida",
+      description:
+        "Soluções personalizadas para atender às necessidades específicas do seu negócio.",
+      icon: (
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          className="lucide lucide-monitor-cog-icon lucide-monitor-cog"
+        >
+          <path d="M12 17v4" />
+          <path d="m14.305 7.53.923-.382" />
+          <path d="m15.228 4.852-.923-.383" />
+          <path d="m16.852 3.228-.383-.924" />
+          <path d="m16.852 8.772-.383.923" />
+          <path d="m19.148 3.228.383-.924" />
+          <path d="m19.53 9.696-.382-.924" />
+          <path d="m20.772 4.852.924-.383" />
+          <path d="m20.772 7.148.924.383" />
+          <path d="M22 13v2a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h7" />
+          <path d="M8 21h8" />
+          <circle cx="18" cy="6" r="3" />
+        </svg>
+      ),
+    },
+    {
+      title: "Software sob medida",
+      description:
+        "Soluções personalizadas para atender às necessidades específicas do seu negócio.",
+      icon: (
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          className="lucide lucide-monitor-cog-icon lucide-monitor-cog"
+        >
+          <path d="M12 17v4" />
+          <path d="m14.305 7.53.923-.382" />
+          <path d="m15.228 4.852-.923-.383" />
+          <path d="m16.852 3.228-.383-.924" />
+          <path d="m16.852 8.772-.383.923" />
+          <path d="m19.148 3.228.383-.924" />
+          <path d="m19.53 9.696-.382-.924" />
+          <path d="m20.772 4.852.924-.383" />
+          <path d="m20.772 7.148.924.383" />
+          <path d="M22 13v2a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h7" />
+          <path d="M8 21h8" />
+          <circle cx="18" cy="6" r="3" />
+        </svg>
+      ),
+    },
+    {
+      title: "Software sob medida",
+      description:
+        "Soluções personalizadas para atender às necessidades específicas do seu negócio.",
+      icon: (
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          className="lucide lucide-monitor-cog-icon lucide-monitor-cog"
+        >
+          <path d="M12 17v4" />
+          <path d="m14.305 7.53.923-.382" />
+          <path d="m15.228 4.852-.923-.383" />
+          <path d="m16.852 3.228-.383-.924" />
+          <path d="m16.852 8.772-.383.923" />
+          <path d="m19.148 3.228.383-.924" />
+          <path d="m19.53 9.696-.382-.924" />
+          <path d="m20.772 4.852.924-.383" />
+          <path d="m20.772 7.148.924.383" />
+          <path d="M22 13v2a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h7" />
+          <path d="M8 21h8" />
+          <circle cx="18" cy="6" r="3" />
+        </svg>
+      ),
+    },
+  ];
   return (
-    <div className="w-full  flex flex-col  justify-center  px-4 md:px-10 2xl:px-20 max-w-[1500px]">
-      <div className="flex items-center flex-col gap-4 ">
-        <h2 className="text-3xl lg:text-4xl  lg:leading-14  font-medium text-center">
-          <ShinyText
-            text="Tecnologias e Soluções"
-            speed={2}
-            delay={0}
-            color="#ffffff"
-            shineColor="#b5b5b5"
-            spread={120}
-            direction="left"
-            yoyo={false}
-            pauseOnHover={false}
-            disabled={false}
+    <div className="w-full  flex flex-col   px-4 md:px-10 2xl:px-20 max-w-[1700px]">
+      <div className="flex  flex-col gap-4 ">
+        <p className="uppercase tracking-widest 2 ml-2 text-xs text-center md:text-start">
+          <DecryptedText
+            text="Soluções digitais"
+            speed={100}
+            maxIterations={10}
+            characters="dSiuõçogsital"
+            className="revealed"
+            parentClassName="all-letters"
+            encryptedClassName="encrypted"
+            sequential={true}
+            animateOn="view"
           />
-        </h2>
+        </p>
+        <div className="flex items-center gap-10">
+          <h2 className="shrink-0 text-center text-3xl font-medium md:text-start lg:text-4xl lg:leading-14">
+            <ShinyText
+              text="Tecnologias e Soluções"
+              speed={2}
+              delay={0}
+              color="#ffffff"
+              shineColor="#b5b5b5"
+              spread={120}
+              direction="left"
+              yoyo={false}
+              pauseOnHover={false}
+              disabled={false}
+            />
+          </h2>
 
-        <p className="max-w-2xl text-center text-gray-300 text-sm md:text-xl mt-4 font-light ">
+        <hr className="flex-1 border-white/10 hidden md:block" />
+        </div>
+
+        <p className="max-w-xl  text-center md:text-start text-gray-300 text-sm md:text-base  font-light ">
           Desenvolvemos soluções digitais sob medida que unem tecnologia e
           inovação para transformar ideias em resultados reais.
         </p>
       </div>
 
       <Swipper
-        className="max-w-275"
+        className=""
         direction="horizontal"
         breakpoints={{
           550: {
@@ -228,7 +278,7 @@ const serviceCards = [
           //   slidesPerView: 2.5,
           // },
           1024: {
-            slidesPerView: 3,
+            slidesPerView: 4,
           },
         }}
       >

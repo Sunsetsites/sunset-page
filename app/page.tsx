@@ -12,7 +12,7 @@ export default function Home() {
     <main>
       {/* <Header /> */}
       <Hero />
-      <div className=" bg-primary-color lg:[clip-path:polygon(0_0,45%_0,60%_80px,100%_80px,100%_100%,0_100%)] text-white py-20 md:py-40 justify-center flex items-center flex-col relative">
+      <div className=" bg-primary-color lg:[clip-path:polygon(0_0,45%_0,60%_80px,100%_80px,100%_100%,0_100%)] text-white py-20 md:py-30 justify-center flex items-center flex-col relative">
         <Services />
       </div>
       <Steps />

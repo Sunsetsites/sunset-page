@@ -1,6 +1,7 @@
 import { SwiperSlide } from "swiper/react";
 import ShinyText from "../ui/shiny-text";
 import Swipper from "../ui/swipper";
+import DecryptedText from "../ui/descript-text";
 
 export default function Steps() {
   const steps = [
@@ -87,8 +88,21 @@ export default function Steps() {
   ];
 
   return (
-    <section className="flex flex-col  w-full gap-4 py-20 md:py-40 px-4 md:px-10 2xl:px-20">
-      <div className="flex items-center flex-col  justify-center">
+    <section className="flex flex-col  w-full gap-4 py-20 md:py-40 px-4 md:px-10 2xl:px-20 max-w-[1700px] mx-auto">
+      <div className="flex items-center flex-col  justify-center md:justify-start md:items-start  ">
+         <p className="uppercase tracking-widest  ml-2 text-xs mb-6 text-center md:hidden w-full">
+          <DecryptedText
+            text="Soluções digitais"
+            speed={100}
+            maxIterations={10}
+            characters="dSiuõçogsital"
+            className="revealed"
+            parentClassName="all-letters"
+            encryptedClassName="encrypted"
+            sequential={true}
+            animateOn="view"
+          />
+        </p>
         <div className="md:hidden">
           <h2 className="text-3xl md:text-4xl  font-medium text-center ">
             <ShinyText
@@ -120,8 +134,21 @@ export default function Steps() {
           </h2>
         </div>
 
-        <div className="hidden md:block">
-          <h2 className="text-3xl md:text-4xl  font-medium text-center ">
+        <p className="uppercase tracking-widest  ml-2 text-xs mb-6 hidden md:block w-full md:text-start">
+          <DecryptedText
+            text="Soluções digitais"
+            speed={100}
+            maxIterations={10}
+            characters="dSiuõçogsital"
+            className="revealed"
+            parentClassName="all-letters"
+            encryptedClassName="encrypted"
+            sequential={true}
+            animateOn="view"
+          />
+        </p>
+        <div className="hidden md:flex  items-center w-full gap-6">
+          <h2 className="text-3xl md:text-4xl font-medium text-center">
             <ShinyText
               text="Da ideia ao software pronto"
               speed={6}
@@ -135,9 +162,10 @@ export default function Steps() {
               disabled={false}
             />
           </h2>
+          <hr className="flex-1 border-gray-200 hidden md:block" />
         </div>
 
-        <p className="max-w-2xl text-center text-sm mt-6 md:text-xl   text-gray-500">
+        <p className="max-w-xl text-center md:text-start text-sm mt-4 md:text-base   text-gray-500 ">
           Planejamos, desenvolvemos e entregamos soluções digitais sob medida,
           do primeiro conceito ao produto final. .
         </p>

@@ -61,7 +61,10 @@ export function Depoiments() {
 
         <p className="text-gray-400 max-w-2xl text-center md:text-start  lg:block">
           A experiência de quem confiou em nosso trabalho para transformar
-          ideias em soluções digitais.{" "}
+          ideias em soluções digitais.
+          <br></br>
+          <br></br>
+          
           <span className="hidden md:block">
             Histórias reais de clientes que encontraram na tecnologia uma forma
             de evoluir seus processos, fortalecer seus negócios e alcançar novos
