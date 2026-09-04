@@ -125,7 +125,7 @@ export default function Services() {
     if (event.pointerType === "touch") {
     
       if (touch.current) {
-        touch.current.style.display = "none";
+        touch.current.style.opacity = "0";
       }
     }
   };
