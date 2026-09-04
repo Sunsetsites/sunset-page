@@ -45,7 +45,7 @@ export function Hero(){
       >
         <div className="hero-glow" aria-hidden="true" />
 
-        <div className="relative z-[1] flex flex-col items-center justify-center gap-10">
+        <div className="relative flex flex-col items-center justify-center gap-10">
           <p className="uppercase tracking-widest  ml-2 text-center text-xs ">
             <DecryptedText
               text="{ DIGITAL INNOVATION }"
@@ -56,10 +56,10 @@ export function Hero(){
               parentClassName="all-letters"
               encryptedClassName="encrypted"
               sequential={true}
-              animateOn="view"
+              animateOn="hover"
             />
           </p>
-          <h1 className="text-4xl md:text-6xl uppercase max-w-6xl  md:leading-20 text-center ">
+          <h1 className="text-4xl md:text-6xl uppercase max-w-6xl leading-12 md:leading-20 text-center ">
             Soluções digitais para negócios modernos.
           </h1>
           <p className="text-base max-w-3xl text-center  text-gray-700 px-10">

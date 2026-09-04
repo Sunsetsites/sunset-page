@@ -103,13 +103,13 @@ export default function Steps() {
             parentClassName="all-letters"
             encryptedClassName="encrypted"
             sequential={true}
-            animateOn="view"
+            animateOn="hover"
           />
         </p>
         <div className="flex  items-center w-full gap-6 justify-center md:justify-start">
-          <h2 className="text-3xl md:max-w-full md:text-4xl font-medium text-center max-w-[300px]">
+          <h2 className="text-3xl md:max-w-full md:text-4xl font-medium text-center ">
             <ShinyText
-              text="Da ideia ao software pronto"
+              text="Como seu projeto acontece"
               speed={6}
               delay={0}
               color="#000000"

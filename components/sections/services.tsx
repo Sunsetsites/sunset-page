@@ -129,10 +129,10 @@ export default function Services() {
             parentClassName="all-letters"
             encryptedClassName="encrypted"
             sequential={true}
-            animateOn="view"
+            animateOn="hover"
           />
         </p>
-        <div className="flex items-center gap-10">
+        <div className="flex justify-center md:justify-start items-center gap-10">
           <h2 className="shrink-0 text-center text-3xl font-medium md:text-start lg:text-4xl lg:leading-14">
             <ShinyText
               text="Tecnologias e Soluções"
