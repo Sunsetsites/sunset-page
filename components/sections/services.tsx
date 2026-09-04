@@ -179,8 +179,8 @@ export default function Services() {
         }}
       >
         {serviceCards.map((card, index) => (
-          <SwiperSlide key={index} className="h-auto">
-            <SpotlightCard
+          <SwiperSlide key={index} className={`h-auto slide-${index}`}>
+            <SpotlightCard  
               className="group card-service !h-[390px] md:!h-[480px] bg-white/3 "
               spotlightColor="rgba(255, 255, 255, 0.2)"
             >

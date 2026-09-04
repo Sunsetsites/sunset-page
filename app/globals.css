@@ -151,15 +151,16 @@ body {
   overflow: hidden;
 }
 
-.swiper-slide:nth-child(2) .card-service {
+
+.slide-1 .card-service {
   background-image: url('/men-2.png');
 }
 
-.swiper-slide:nth-child(3) .card-service {
+.slide-2 .card-service {
   background-image: url('/men-3.png');
 }
 
-.swiper-slide:nth-child(4) .card-service {
+.slide-3 .card-service {
   background-image: url('/men-4.png');
 }
 
