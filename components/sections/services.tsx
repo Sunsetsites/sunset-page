@@ -225,7 +225,7 @@ export default function Services() {
       <div className="flex  flex-col gap-4 ">
         <p className="uppercase tracking-widest 2 ml-2 text-xs text-center md:text-start">
           <DecryptedText
-            text="Soluções digitais"
+            text="{ Soluções digitais }"
             speed={100}
             maxIterations={10}
             characters="dSiuõçogsital"
@@ -294,7 +294,7 @@ export default function Services() {
                 </div>
 
                 <div className="md:mt-25 mt-10 flex flex-col justify-center gap-3">
-                  <h3 className="text-xl font-bold">{card.title}</h3>
+                  <h3 className="text-xl font-medium uppercase">{card.title}</h3>
 
                   <p className="text-sm leading-6 text-gray-400">
                     {card.description}

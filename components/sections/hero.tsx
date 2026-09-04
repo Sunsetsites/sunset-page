@@ -46,9 +46,9 @@ export function Hero(){
         <div className="hero-glow" aria-hidden="true" />
 
         <div className="relative z-[1] flex flex-col items-center justify-center gap-10">
-          <p className="uppercase tracking-widest 2 ml-2 text-center text-sm ">
+          <p className="uppercase tracking-widest  ml-2 text-center text-xs ">
             <DecryptedText
-              text="DIGITAL INNOVATION"
+              text="{ DIGITAL INNOVATION }"
               speed={100}
               maxIterations={10}
               characters="IDGITALINNOVATION"
@@ -76,7 +76,7 @@ export function Hero(){
           </div>
         </div>
 
-        <div className="absolute bottom-5 left-5 flex items-center gap-2 text-sm">
+        {/* <div className="absolute bottom-5 left-5 flex items-center gap-2 text-sm">
           
           <img
             src={`https://cdn.simpleicons.org/${tecnologias[count].icone}`}
@@ -87,7 +87,7 @@ export function Hero(){
             {tecnologias[count].nome}
           </span>
            <p className="text-gray-700">tecnologia utilizada em nossos projetos</p>
-        </div>
+        </div> */}
 
         <div className="absolute bottom-6 right-6 z-[1] hidden items-center gap-3 text-[10px] tracking-[0.25em] text-gray-500 md:flex">
           <span>Scroll to explore</span>

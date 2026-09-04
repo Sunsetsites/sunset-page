@@ -90,53 +90,12 @@ export default function Steps() {
   return (
     <section className="flex flex-col  w-full gap-4 py-20 md:py-40 px-4 md:px-10 2xl:px-20 max-w-[1700px] mx-auto">
       <div className="flex items-center flex-col  justify-center md:justify-start md:items-start  ">
-         <p className="uppercase tracking-widest  ml-2 text-xs mb-6 text-center md:hidden w-full">
-          <DecryptedText
-            text="Soluções digitais"
-            speed={100}
-            maxIterations={10}
-            characters="dSiuõçogsital"
-            className="revealed"
-            parentClassName="all-letters"
-            encryptedClassName="encrypted"
-            sequential={true}
-            animateOn="view"
-          />
-        </p>
-        <div className="md:hidden">
-          <h2 className="text-3xl md:text-4xl  font-medium text-center ">
-            <ShinyText
-              text="Da ideia"
-              speed={6}
-              delay={0}
-              color="#000000"
-              shineColor="#b5b5b5"
-              spread={120}
-              direction="left"
-              yoyo={false}
-              pauseOnHover={false}
-              disabled={false}
-            />
-          </h2>
-          <h2 className="text-3xl md:text-4xl  font-medium text-center ">
-            <ShinyText
-              text="ao software pronto"
-              speed={6}
-              delay={0}
-              color="#000000"
-              shineColor="#b5b5b5"
-              spread={120}
-              direction="left"
-              yoyo={false}
-              pauseOnHover={false}
-              disabled={false}
-            />
-          </h2>
-        </div>
+       
+       
 
-        <p className="uppercase tracking-widest  ml-2 text-xs mb-6 hidden md:block w-full md:text-start">
+        <p className="uppercase tracking-widest  ml-2 text-xs mb-6  text-center  w-full md:text-start">
           <DecryptedText
-            text="Soluções digitais"
+            text="{ Soluções digitais }"
             speed={100}
             maxIterations={10}
             characters="dSiuõçogsital"
@@ -147,8 +106,8 @@ export default function Steps() {
             animateOn="view"
           />
         </p>
-        <div className="hidden md:flex  items-center w-full gap-6">
-          <h2 className="text-3xl md:text-4xl font-medium text-center">
+        <div className="flex  items-center w-full gap-6 justify-center md:justify-start">
+          <h2 className="text-3xl md:max-w-full md:text-4xl font-medium text-center max-w-[300px]">
             <ShinyText
               text="Da ideia ao software pronto"
               speed={6}
