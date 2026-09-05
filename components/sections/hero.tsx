@@ -59,7 +59,7 @@ export function Hero() {
             animateOn="hover"
           />
         </p>
-        <h1 className="text-3xl md:text-5xl uppercase max-w-6xl leading-12 md:leading-18 text-center ">
+        <h1 className="text-2xl md:text-5xl uppercase max-w-6xl leading-9 md:leading-18 text-center ">
           Soluções digitais para negócios <span className="md:hidden">modernos</span>{" "}
           <span className="hidden md:inline-block">
             <TextType
@@ -74,7 +74,7 @@ export function Hero() {
           </span>
         </h1>
 
-        <p className="text-base max-w-3xl text-center  text-gray-700 px-10">
+        <p className="text-sm max-w-3xl text-center  text-gray-700 px-10">
           Criamos softwares, aplicativos e experiências digitais sob medida para
           empresas que buscam inovação.
         </p>

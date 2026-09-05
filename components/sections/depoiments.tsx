@@ -57,7 +57,7 @@ export function Depoiments() {
                     animateOn="hover"
                   />
                 </p>
-        <h2 className="text-3xl  text-center md:text-start md:text-4xl  w-full  lg:max-w-2xl lg:leading-12 font-medium">
+        <h2 className="text-2xl  text-center md:text-start md:text-4xl  w-full  lg:max-w-2xl lg:leading-12 font-medium">
           <ShinyText
             text="Resultados que vão além do código"
             speed={2}

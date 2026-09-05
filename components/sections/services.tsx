@@ -135,7 +135,7 @@ export default function Services() {
           />
         </p>
         <div className="flex justify-center md:justify-start items-center gap-10">
-          <h2 className="shrink-0 text-center text-3xl font-medium md:text-start lg:text-4xl lg:leading-14">
+          <h2 className="shrink-0 text-center text-2xl font-medium md:text-start lg:text-4xl lg:leading-14 ">
             <ShinyText
               text="Tecnologias e Soluções"
               speed={2}

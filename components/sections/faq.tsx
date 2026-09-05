@@ -53,28 +53,30 @@ export default function Faq() {
     >
       <div className="mx-auto grid max-w-[1440px] gap-14 lg:grid-cols-[minmax(280px,0.8fr)_minmax(520px,1.2fr)] lg:gap-24">
         <div className="lg:pt-2">
-          <div className="mb-7 flex items-center gap-3 font-mono text-[10px] font-semibold uppercase tracking-[0.22em] text-primary-color">
-            <DecryptedText
-              text="{ Dúvidas frequentes }"
-              speed={100}
-              maxIterations={10}
-              characters="dúvFreqentes"
-              className="revealed"
-              parentClassName="all-letters"
-              encryptedClassName="encrypted"
-              sequential={true}
-              animateOn="hover"
-            />
-          </div>
-          <h2 className="max-w-md text-3xl md:text-4xl leading-10 font-medium text-gray-900 sm:text-4xl md:leading-12">
+          <div className="mb-7 flex flex-col items-center gap-3  text-primary-color justify-center md:justify-start md:items-start">
+            <p className="text-xs">
+              <DecryptedText
+                text="{ Dúvidas frequentes }"
+                speed={100}
+                maxIterations={10}
+                characters="dúvFreqentes"
+                className="revealed"
+                parentClassName="all-letters"
+                encryptedClassName="encrypted"
+                sequential={true}
+                animateOn="hover"
+              />
+            </p>
+          <h2 className="max-w-md text-2xl md:text-4xl leading-8 font-medium text-gray-900 sm:text-4xl md:leading-12 text-center md:text-start">
             Clareza faz parte
             <br />
             da <span className="text-primary-color">entrega.</span>
           </h2>
-          <p className="mt-8 max-w-xs text-sm leading-6 text-[#64748b]">
+          <p className="mt-4 text-center md:text-start text-sm leading-6 text-[#64748b]">
             Se a sua pergunta não estiver aqui, mande uma mensagem. A conversa
             começa sem compromisso.
           </p>
+          </div>
         </div>
 
         <div className="border-t border-[#17223b]/15">
