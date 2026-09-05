@@ -1,4 +1,5 @@
 import { SwiperSlide } from "swiper/react";
+import { Check, MessageCircle, PanelsTopLeft, Rocket } from "lucide-react";
 import ShinyText from "../ui/shiny-text";
 import Swipper from "../ui/swipper";
 import DecryptedText from "../ui/descript-text";
@@ -8,82 +9,22 @@ export default function Steps() {
     {
       title: "Você explica",
       description: "Conversamos sobre seu negócio, objetivos e clientes.",
-      icon: (
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          className="h-6 w-6 text-gray-400 group-hover:text-primary-color transition group-hover:duration-300"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-          />
-        </svg>
-      ),
+      icon: MessageCircle,
     },
     {
       title: "Criamos o layout",
       description: "Transformamos a estratégia em uma direção visual.",
-      icon: (
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          className="h-6 w-6 text-gray-400 group-hover:text-primary-color transition group-hover:duration-300"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-          />
-        </svg>
-      ),
+      icon: PanelsTopLeft,
     },
     {
       title: "Você aprova",
       description: "Ajustamos os detalhes até a página fazer sentido.",
-      icon: (
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          className="h-6 w-6 text-gray-400 group-hover:text-primary-color transition group-hover:duration-300"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-          />
-        </svg>
-      ),
+      icon: Check,
     },
     {
       title: "Publicamos",
       description: "Colocamos no ar e configuramos o SEO para busca.",
-      icon: (
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          className="h-6 w-6 text-gray-400 group-hover:text-primary-color transition group-hover:duration-300"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-          />
-        </svg>
-      ),
+      icon: Rocket,
     },
   ];
 
@@ -155,18 +96,33 @@ export default function Steps() {
           {steps.map((step, index) => (
             <SwiperSlide key={index} className="h-auto">
               <div className="flex h-full flex-col justify-between gap-10 border-t border-b lg:border-b-0  border-r border-gray-200 p-10 group">
-                <span className="text-gray-200 text-3xl font-medium group-hover:text-primary-color transition group-hover:duration-300">
-                  {index < 9 ? `0${index + 1}` : index + 1}
-                </span>
+                <div className="flex items-start justify-between border-b border-gray-200/80 pb-4">
+                  <div className="flex items-baseline gap-2 font-mono">
+                    <span className="text-5xl font-medium leading-none tracking-[-0.12em] text-gray-300 transition group-hover:text-primary-color">
+                      N{index + 1}
+                    </span>
+                    <span className="text-[10px] font-semibold tracking-widest text-gray-400">
+                      / 04
+                    </span>
+                  </div>
+                  <span className="font-mono text-[9px] font-semibold uppercase tracking-[0.2em] text-gray-400 transition group-hover:text-primary-color">
+                    SYS.N{index + 1}
+                  </span>
+                </div>
                 <div className="space-y-3">
-                  <h3 className="text-lg font-medium uppercase  group-hover:text-primary-color transition group-hover:duration-300">
+                  <h3 className="text-md font-medium uppercase  group-hover:text-primary-color transition group-hover:duration-300">
                     {step.title}
                   </h3>
                   <p className="text-sm font-light text-gray-600">
                     {step.description}
                   </p>
                 </div>
-                {step.icon}
+                <step.icon
+                  size={28}
+                  strokeWidth={1.5}
+                  className="text-gray-400 transition group-hover:text-primary-color"
+                  aria-hidden="true"
+                />
               </div>
             </SwiperSlide>
           ))}

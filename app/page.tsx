@@ -1,29 +1,32 @@
 "use client";
 
 import { Depoiments } from "@/components/sections/depoiments";
+import { Header } from "@/components/sections/header";
 import { Hero } from "@/components/sections/hero";
 import Services from "@/components/sections/services";
 import Steps from "@/components/sections/steps";
 import Threads from "@/components/ui/Threads";
 import { MessageCircle } from "lucide-react";
+import Faq from "@/components/sections/faq";
 
 export default function Home() {
   return (
     <main>
-      {/* <Header /> */}
+      <Header />
       <Hero />
-      <div className=" bg-primary-color lg:[clip-path:polygon(0_0,45%_0,60%_80px,100%_80px,100%_100%,0_100%)] text-white py-20 md:py-30 justify-center flex items-center flex-col relative">
+      <div className=" bg-primary-color lg:[clip-path:polygon(0_0,45%_0,60%_80px,100%_80px,100%_100%,0_100%)] text-white  py-20 md:py-30 justify-center flex items-center flex-col relative">
         <Services />
       </div>
       <Steps />
       <Depoiments />
+      <Faq />
 
-      <section className="cta-section px-4  md:px-10 2xl:px-30 text-center flex justify-center items-center bg-black ">
+      <section className="cta-section px-4  md:px-10 2xl:px-30 text-center flex justify-center items-center  ">
         <div className="relative overflow-hidden py-28 w-full flex justify-center items-center ">
           <div className="cta-grid" />
           <div className="relative z-10 md:max-w-4xl flex justify-center items-center flex-col gap-6">
             {/* <SectionLabel no="09">Próximo passo</SectionLabel> */}
-            <h2 className="text-3xl md:text-6xl  md:leading-16 ">
+            <h2 className="text-3xl md:text-5xl  md:leading-16 ">
               Pronto para colocar sua empresa na internet?
             </h2>
             <p className="mt-2 max-w-xl text-base md:text-lg text-center leading-8 text-navy/60">

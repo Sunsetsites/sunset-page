@@ -5,12 +5,9 @@ import SpotlightCard from "../ui/SpotlightCard";
 import Swipper from "../ui/swipper";
 import { SwiperSlide } from "swiper/react";
 import DecryptedText from "../ui/descript-text";
-
-
+import TextType from "../ui/TextType";
 
 export default function Services() {
-
-
   const tecnologias = [
     {
       src: "https://cdn.simpleicons.org/react/ffffff",
@@ -121,7 +118,6 @@ export default function Services() {
     },
   ];
 
- 
   return (
     <div className="relative w-full flex flex-col px-4 md:px-10 2xl:px-20 max-w-[1700px]">
       <div className="flex  flex-col gap-4 ">
@@ -162,8 +158,8 @@ export default function Services() {
           inovação para transformar ideias em resultados reais.
         </p>
       </div>
-     
-      <div >
+
+      <div>
         <Swipper
           loop={false}
           direction="horizontal"
@@ -197,8 +193,16 @@ export default function Services() {
                     {card.icon}
                   </div>
                   <div className="flex flex-col justify-center gap-3">
-                    <h3 className="text-lg font-medium uppercase">
-                      {card.title}
+                    <h3 className="text-md font-medium uppercase">
+                      <TextType
+                        text={card.title}
+                        typingSpeed={75}
+                        pauseDuration={10800}
+                        showCursor
+                        cursorCharacter="!"
+                        deletingSpeed={50}
+                        cursorBlinkDuration={0.5}
+                      />
                     </h3>
                     <p className="2xl:h-6 md:h-14 h-10 text-xs leading-5 text-gray-400">
                       {card.description}
@@ -218,7 +222,20 @@ export default function Services() {
         </Swipper>
       </div>
 
-      <div className="mt-20 w-full  2xl:px-10">
+      <div className="mt-20 flex w-full flex-col gap-6 md:flex-row md:items-center 2xl:px-10">
+        <p className="shrink-0 uppercase tracking-widest ml-2 text-xs text-center md:text-start">
+          <DecryptedText
+            text="{ Tecnologias utilizadas }"
+            speed={100}
+            maxIterations={10}
+            characters="Tecnologiasutilizadas"
+            className="revealed"
+            parentClassName="all-letters"
+            encryptedClassName="encrypted"
+            sequential={true}
+            animateOn="hover"
+          />
+        </p>
         <LogoLoop
           logos={tecnologias}
           speed={80}
@@ -230,6 +247,7 @@ export default function Services() {
           scaleOnHover
           fadeOut
           fadeOutColor="#141414"
+          className="min-w-0 flex-1"
           ariaLabel="Tecnologias que usamos"
           renderItem={(item, key) => {
             const tech = item as {
@@ -244,7 +262,8 @@ export default function Services() {
             return (
               <div
                 key={key}
-                className="flex items-center gap-3 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm font-medium text-white shadow-[0_0_20px_rgba(255,255,255,0.06)]"
+                className="flex items-center gap-3  
+                 px-4 py-2 text-sm font-medium text-white "
               >
                 <img
                   src={tech.src}

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Michroma&family=Sora:wght@100..800&display=swap");
 @import "tailwindcss";
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
@@ -44,11 +44,18 @@
 @theme {
   --color-primary-color: var(--primary-color);
   --font-sans: "Sora", sans-serif;
+  --font-display: "Michroma", sans-serif;
 }
-
 
 body {
   font-family: "Sora", sans-serif;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Michroma", sans-serif;
+  letter-spacing: 0;
 }
 
 .cta-grid {
@@ -71,7 +78,10 @@ body {
 .cta-section {
   position: relative;
   background: white;
-  
+  border-width: 1px;
+  margin: 0 auto;
+  margin-bottom: 4rem;
+  max-width: 80%;
 }
 .cta-section::after {
   content: "↗";
@@ -94,9 +104,8 @@ body {
     linear-gradient(90deg, rgba(23, 34, 59, 0.23) 1px, transparent 1px);
 }
 
-
-#grid{
-  --grid-opacity: 0.02;
+#grid {
+  --grid-opacity: 0.03;
   --mouse-x: 50%;
   --mouse-y: 50%;
   position: relative;
@@ -104,8 +113,16 @@ body {
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   background-color: #ffffff;
   background-image:
-    linear-gradient(to right, rgba(23, 23, 23, var(--grid-opacity)) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(23, 23, 23, var(--grid-opacity)) 1px, transparent 1px);
+    linear-gradient(
+      to right,
+      rgba(23, 23, 23, var(--grid-opacity)) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      to bottom,
+      rgba(23, 23, 23, var(--grid-opacity)) 1px,
+      transparent 1px
+    );
   background-size: 80px 80px;
 }
 
@@ -136,41 +153,42 @@ body {
   width: min(42vw, 560px);
   aspect-ratio: 1;
   border-radius: 9999px;
-  background: radial-gradient(circle, rgba(245, 158, 11, 0.12), transparent 68%);
+  background: radial-gradient(
+    circle,
+    rgba(245, 158, 11, 0.12),
+    transparent 68%
+  );
   filter: blur(8px);
   animation: hero-glow-pulse 6s ease-in-out infinite;
   pointer-events: none;
 }
 
-
 .card-service {
   position: relative;
-  background-image: url('/men.jpg');
+  background-image: url("/men.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   overflow: hidden;
 }
 
-
 .slide-1 .card-service {
-  background-image: url('/men-2.png');
+  background-image: url("/men-2.png");
 }
 
 .slide-2 .card-service {
-  background-image: url('/men-3.png');
+  background-image: url("/men-3.png");
 }
 
 .slide-3 .card-service {
-  background-image: url('/men-4.png');
+  background-image: url("/men-4.png");
 }
 
-
 .card-service::before {
-  content: '';
+  content: "";
   position: absolute;
   inset: 0;
- background: rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0.8);
 }
 
 .card-service > * {
@@ -198,7 +216,10 @@ body {
   border-radius: 999px;
   background: currentColor;
   opacity: 0.2;
-  transition: width 220ms ease, opacity 220ms ease, transform 220ms ease;
+  transition:
+    width 220ms ease,
+    opacity 220ms ease,
+    transform 220ms ease;
 }
 
 .swiper-continuous .swiper-pagination-bullet-active {

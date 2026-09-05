@@ -5,6 +5,7 @@ import ShinyText from "../ui/shiny-text";
 import SpotlightCard from "../ui/SpotlightCard";
 import Swipper from "../ui/swipper";
 import { useEffect, useState } from "react";
+import DecryptedText from "../ui/descript-text";
 
 export function Depoiments() {
   const [largura, setLargura] = useState(0);
@@ -42,8 +43,21 @@ export function Depoiments() {
     <div
       className={`relative overflow-hidden bg-primary-color lg:[clip-path:polygon(0_0,45%_0,60%_80px,100%_80px,100%_100%,0_100%)] text-white pt-20 md:pt-40 pb-20  flex  ${largura < 1300 ? "flex-col" : "flex-row"} justify-between mt-20 px-4 md:px-10  2xl:px-30`}
     >
-      <div className="relative z-10 flex gap-12  flex-col w-full justify-center md:justify-start  lg:max-w-2xl">
-        <h2 className="text-3xl  text-center md:text-start md:text-4xl lg:text-6xl w-full  lg:max-w-2xl lg:leading-18 font-medium">
+      <div className="relative z-10 flex gap-6  flex-col w-full justify-center md:justify-start  lg:max-w-lg">
+         <p className="uppercase tracking-widest  ml-2 text-center md:text-start text-xs ">
+                  <DecryptedText
+                    text="{ Depoimentos }"
+                    speed={100}
+                    maxIterations={10}
+                    characters="IDGITALINNOVATION"
+                    className="revealed"
+                    parentClassName="all-letters"
+                    encryptedClassName="encrypted"
+                    sequential={true}
+                    animateOn="hover"
+                  />
+                </p>
+        <h2 className="text-3xl  text-center md:text-start md:text-4xl  w-full  lg:max-w-2xl lg:leading-12 font-medium">
           <ShinyText
             text="Resultados que vão além do código"
             speed={2}
