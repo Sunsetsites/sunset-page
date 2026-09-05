@@ -36,7 +36,7 @@ export default function Steps() {
 
         <p className="uppercase tracking-widest  ml-2 text-xs mb-6  text-center  w-full md:text-start">
           <DecryptedText
-            text="{ Soluções digitais }"
+            text="{ NOSSO PROCESSO }"
             speed={100}
             maxIterations={10}
             characters="dSiuõçogsital"

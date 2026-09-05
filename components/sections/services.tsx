@@ -99,21 +99,21 @@ export default function Services() {
       icon: <Monitor size={24} strokeWidth={1.8} />,
     },
     {
-      title: "Sites mobile-first",
+      title: "WEBSITES",
       description:
         "Experiências rápidas e responsivas, pensadas primeiro para a rotina de quem acessa pelo celular.",
       icon: <Smartphone size={24} strokeWidth={1.8} />,
     },
     {
-      title: "E-commerce",
+      title: "SISTEMAS",
       description:
-        "Lojas virtuais completas para vender melhor, com catálogo, checkout e uma jornada simples.",
+        "Sistemas personalizados para automatizar processos e melhorar a eficiência da sua operação.",
       icon: <ShoppingCart size={24} strokeWidth={1.8} />,
     },
     {
-      title: "Software sob medida",
+      title: "IA & AUTOMAÇÃO",
       description:
-        "Soluções digitais personalizadas para organizar processos e fazer seu negócio crescer.",
+        "Soluções inteligentes que utilizam inteligência artificial para otimizar tarefas e processos.",
       icon: <Code2 size={24} strokeWidth={1.8} />,
     },
   ];
@@ -134,8 +134,8 @@ export default function Services() {
             animateOn="hover"
           />
         </p>
-        <div className="flex w-full items-center justify-center gap-10 md:justify-start">
-          <h2 className="w-full min-w-0 text-center text-3xl font-medium md:text-start lg:w-auto lg:text-4xl lg:leading-14">
+        <div className="flex justify-center md:justify-start items-center gap-10">
+          <h2 className="text-center text-2xl font-medium md:text-start lg:text-4xl lg:leading-14  ">
             <ShinyText
               text="Tecnologias e Soluções"
               speed={2}
@@ -211,7 +211,7 @@ export default function Services() {
                       href="#contato"
                       className="mt-10 flex flex-1 items-center justify-center gap-2 rounded-full bg-white p-3 px-10 text-center text-sm font-medium text-black"
                     >
-                      <span>Contatar equipe</span>
+                      <span>Começar meu projeto</span>
                       <span aria-hidden="true">↗</span>
                     </a>
                   </div>
