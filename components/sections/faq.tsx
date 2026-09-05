@@ -67,7 +67,7 @@ export default function Faq() {
                 animateOn="hover"
               />
             </p>
-          <h2 className="max-w-md text-2xl md:text-4xl leading-8 font-medium text-gray-900 sm:text-4xl md:leading-12 text-center md:text-start">
+          <h2 className="max-w-md text-3xl md:text-4xl leading-8 font-medium text-gray-900 sm:text-4xl md:leading-12 text-center md:text-start">
             Clareza faz parte
             <br />
             da <span className="text-primary-color">entrega.</span>

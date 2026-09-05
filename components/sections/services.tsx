@@ -134,8 +134,8 @@ export default function Services() {
             animateOn="hover"
           />
         </p>
-        <div className="flex justify-center md:justify-start items-center gap-10">
-          <h2 className="shrink-0 text-center text-2xl font-medium md:text-start lg:text-4xl lg:leading-14 ">
+        <div className="flex w-full items-center justify-center gap-10 md:justify-start">
+          <h2 className="w-full min-w-0 text-center text-3xl font-medium md:text-start lg:w-auto lg:text-4xl lg:leading-14">
             <ShinyText
               text="Tecnologias e Soluções"
               speed={2}

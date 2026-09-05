@@ -48,7 +48,7 @@ export default function Steps() {
           />
         </p>
         <div className="flex  items-center w-full gap-6 justify-center md:justify-start">
-          <h2 className="text-2xl md:max-w-full md:text-4xl font-medium text-center ">
+          <h2 className="text-3xl md:max-w-full md:text-4xl font-medium text-center ">
             <ShinyText
               text="Como seu projeto acontece"
               speed={6}
