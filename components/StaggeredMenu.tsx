@@ -501,14 +501,14 @@ export const StaggeredMenu: React.FC<StaggeredMenuProps> = ({
             >
               {items && items.length ? (
                 items.map((it, idx) => (
-                  <li className="sm-panel-itemWrap relative overflow-hidden leading-none" key={it.label + idx}>
+                  <li className="sm-panel-itemWrap relative overflow-hidden leading-none border-b border-neutral-100 pb-6 " key={it.label + idx}>
                     <a
-                      className="sm-panel-link relative text-black font-semibold text-lg cursor-pointer leading-none tracking-[-1px] uppercase transition-[background,color] duration-150 ease-linear inline-block no-underline pr-[1.4em]"
+                      className="sm-panel-link relative text-black font-semibold text-lg cursor-pointer leading-none tracking-[1px] uppercase transition-[background,color] duration-150 ease-linear inline-block no-underline pr-[1.4em]"
                       href={it.link}
                       aria-label={it.ariaLabel}
                       data-index={idx + 1}
                     >
-                      <span className="sm-panel-itemLabel inline-block [transform-origin:50%_100%] will-change-transform">
+                      <span className="sm-panel-itemLabel mb-3 inline-block [transform-origin:50%_100%] will-change-transform">
                         {it.label}
                       </span>
                     </a>
@@ -532,7 +532,7 @@ export const StaggeredMenu: React.FC<StaggeredMenuProps> = ({
                   Conte seu projeto e descubra como podemos transformar ideias em soluções inteligentes.
                 </p>
                 <a className="sm-contact-link" href="#contato" onClick={closeMenu}>
-                  Entrar em contato
+                  Começar Projeto
                   <span aria-hidden="true">↗</span>
                 </a>
               </div>
