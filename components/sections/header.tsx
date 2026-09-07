@@ -65,7 +65,7 @@ export function Header() {
           displayItemNumbering
           isFixed={true}
           menuButtonColor="#171719"
-          openMenuButtonColor="#171719"
+          openMenuButtonColor="#ffffff"
           changeMenuColorOnOpen
           colors={["#ff6b4a", "#171719"]}
           logoUrl="/logo.png"
