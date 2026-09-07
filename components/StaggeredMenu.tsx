@@ -1,6 +1,6 @@
 import React, { useCallback, useLayoutEffect, useRef, useState } from 'react';
 import { gsap } from 'gsap';
-import { AtSign, Globe } from 'lucide-react';
+import { AtSign, Globe, Menu, X } from 'lucide-react';
 
 export interface StaggeredMenuItem {
   label: string;
@@ -57,6 +57,7 @@ export const StaggeredMenu: React.FC<StaggeredMenuProps> = ({
 
   const plusHRef = useRef<HTMLSpanElement | null>(null);
   const plusVRef = useRef<HTMLSpanElement | null>(null);
+  const plusMRef = useRef<HTMLSpanElement | null>(null);
   const iconRef = useRef<HTMLSpanElement | null>(null);
 
   const textInnerRef = useRef<HTMLSpanElement | null>(null);
@@ -255,6 +256,7 @@ export const StaggeredMenu: React.FC<StaggeredMenuProps> = ({
     const icon = iconRef.current;
     const h = plusHRef.current;
     const v = plusVRef.current;
+    const m = plusMRef.current;
     if (!icon || !h || !v) return;
 
     spinTweenRef.current?.kill();
@@ -264,11 +266,13 @@ export const StaggeredMenu: React.FC<StaggeredMenuProps> = ({
       gsap.set(icon, { rotate: 0, transformOrigin: '50% 50%' });
       spinTweenRef.current = gsap
         .timeline({ defaults: { ease: 'power4.out' } })
+        .to(m, { opacity: 0, duration: 0.2 }, 0)
         .to(h, { rotate: 45, duration: 0.5 }, 0)
         .to(v, { rotate: -45, duration: 0.5 }, 0);
     } else {
       spinTweenRef.current = gsap
         .timeline({ defaults: { ease: 'power3.inOut' } })
+        .to(m, { opacity: 1, duration: 0.2 }, 0)
         .to(h, { rotate: 0, duration: 0.35 }, 0)
         .to(v, { rotate: 90, duration: 0.35 }, 0)
         .to(icon, { rotate: 0, duration: 0.001 }, 0);
@@ -447,7 +451,7 @@ export const StaggeredMenu: React.FC<StaggeredMenuProps> = ({
           <button
             ref={toggleBtnRef}
             className={`sm-toggle relative inline-flex items-center gap-[0.3rem] bg-transparent border-0 cursor-pointer font-medium leading-none overflow-visible pointer-events-auto ${
-              open ? 'text-black' : 'text-[#e9e9ef]'
+              open ? 'text-black sm:text-white' : 'text-[#e9e9ef]'
             }`}
             aria-label={open ? 'Fechar menu' : 'Abrir menu'}
             aria-expanded={open}
@@ -455,11 +459,7 @@ export const StaggeredMenu: React.FC<StaggeredMenuProps> = ({
             onClick={toggleMenu}
             type="button"
           >
-            <span
-              ref={textWrapRef}
-              className="sm-toggle-textWrap relative inline-block h-[1em] overflow-hidden whitespace-nowrap w-[var(--sm-toggle-width,auto)] min-w-[var(--sm-toggle-width,auto)]"
-              aria-hidden="true"
-            >
+            <span ref={textWrapRef} className="hidden" aria-hidden="true">
               <span ref={textInnerRef} className="sm-toggle-textInner flex flex-col leading-none">
                 {textLines.map((l, i) => (
                   <span className="sm-toggle-line block h-[1em] leading-none" key={i}>
@@ -469,20 +469,11 @@ export const StaggeredMenu: React.FC<StaggeredMenuProps> = ({
               </span>
             </span>
 
-            <span
-              ref={iconRef}
-              className="sm-icon relative w-[14px] h-[14px] shrink-0 inline-flex items-center justify-center [will-change:transform]"
-              aria-hidden="true"
-            >
-              <span
-                ref={plusHRef}
-                className="sm-icon-line absolute left-1/2 top-1/2 w-full h-[2px] bg-current rounded-[2px] -translate-x-1/2 -translate-y-1/2 [will-change:transform]"
-              />
-              <span
-                ref={plusVRef}
-                className="sm-icon-line sm-icon-line-v absolute left-1/2 top-1/2 w-full h-[2px] bg-current rounded-[2px] -translate-x-1/2 -translate-y-1/2 [will-change:transform]"
-              />
-            </span>
+            {open ? (
+              <X size={22} strokeWidth={1.8} aria-hidden="true" />
+            ) : (
+              <Menu size={22} strokeWidth={1.8} aria-hidden="true" />
+            )}
           </button>
         </header>
 

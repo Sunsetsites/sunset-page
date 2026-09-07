@@ -74,7 +74,7 @@ export default function Faq() {
             return (
               <div
                 key={item.question}
-                className={`border-b border-[#17223b]/5 border-l-3 transition-colors duration-300 ${isOpen ? "border-l-primary-color" : "border-l-[#17223b]/10"}`}
+                className={`border-b border-[#17223b]/5 border-l-2 transition-colors duration-300 ${isOpen ? "border-l-primary-color" : "border-l-[#17223b]/10"}`}
               >
                 <button
                   type="button"

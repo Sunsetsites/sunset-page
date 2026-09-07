@@ -148,7 +148,7 @@ export default function Services() {
         </p>
       </div>
 
-      <div>
+   
         <Swipper
           loop={false}
           direction="horizontal"
@@ -198,9 +198,9 @@ export default function Services() {
                     </p>
                     <a
                       href="#contato"
-                      className="mt-10 flex flex-1 items-center justify-center gap-2 rounded-full bg-white p-3 px-10 text-center text-sm font-medium text-black"
+                      className="mt-10 flex flex-1 items-center justify-center gap-2 rounded-full bg-white p-3 px-10 text-center text-sm font-medium text-black "
                     >
-                      <span>Começar meu projeto</span>
+                      <span className="text-sm font-medium text-black shrink-0">Começar meu projeto</span>
                       <span aria-hidden="true">↗</span>
                     </a>
                   </div>
@@ -209,9 +209,9 @@ export default function Services() {
             </SwiperSlide>
           ))}
         </Swipper>
-      </div>
+    
 
-      <div className="mt-20 flex w-full flex-col gap-6 md:flex-row md:items-center 2xl:px-10">
+      <div className="mt-15 flex w-full flex-col gap-6 md:flex-row md:items-center 2xl:px-10">
         <p className="shrink-0 uppercase tracking-widest ml-2 text-xs text-center md:text-start">
           <span className="text-[#ff6b4a]">{"{"}</span>{" Tecnologias utilizadas "}<span className="text-[#ff6b4a]">{"}"}</span>
         </p>

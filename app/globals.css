@@ -203,7 +203,7 @@ h3 {
 
 .swiper-continuous .swiper-pagination-bullet {
   width: 0.45rem;
-  height: 0.45rem;
+  height: 0.20rem;
   margin: 0 !important;
   border-radius: 999px;
   background: currentColor;

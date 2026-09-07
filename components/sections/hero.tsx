@@ -1,3 +1,4 @@
+import { ArrowUpRight } from "lucide-react";
 import { useRef, type MouseEvent } from "react";
 
 export function Hero() {
@@ -20,7 +21,7 @@ export function Hero() {
     >
       <div className="hero-glow" aria-hidden="true" />
 
-      <div className="relative flex w-full max-w-4xl flex-col items-center justify-center gap-7 text-center sm:gap-9">
+      <div className="relative flex w-full max-w-4xl flex-col items-center justify-center gap-12 text-center ">
         <p className="text-[10px] uppercase tracking-[0.24em] sm:text-xs sm:tracking-widest">
           <span className="text-[#ff6b4a]">{"{"}</span>{" DIGITAL INNOVATION "}<span className="text-[#ff6b4a]">{"}"}</span>
         </p>
@@ -28,29 +29,19 @@ export function Hero() {
           Seu negócio merece uma presença digital à altura.
         </h1>
 
-        {/* <span className="md:hidden">modernos</span>{" "}
-          <span className="hidden md:inline-block">
-            <TextType
-              text={["modernos", "inovadores", "conectados"]}
-              typingSpeed={75}
-              pauseDuration={1500}
-              showCursor
-              cursorCharacter="!"
-              deletingSpeed={50}
-              cursorBlinkDuration={0.5}
-            />
-          </span> */}
+  
         <p className="max-w-2xl px-2 text-sm leading-6 text-gray-700 sm:px-6 sm:text-base sm:leading-7">
-          Criamos softwares, aplicativos e experiências digitais sob medida para
-          empresas que buscam inovação.
+         Sistemas sob medida para empresas que precisam vender melhor,automatizar processos ou lançar uma nova operação digital
         </p>
-        <div className="mt-2 flex w-full items-center justify-center text-sm sm:mt-4">
-          <button className="min-h-12 w-full max-w-xs cursor-pointer rounded-md bg-primary-color px-5 py-3 font-medium text-white transition-all duration-300 hover:shadow-2xl sm:w-auto">
+        <div className="flex-col mt-2 flex w-full items-center justify-center text-sm sm:mt-4 gap-4 md:flex-row md:gap-10">
+          <button className="inline-flex min-h-12 w-full max-w-xs cursor-pointer items-center justify-center gap-2 rounded-md bg-primary-color px-5 py-3 font-medium text-white transition-all duration-300 hover:shadow-2xl sm:w-auto">
             Comece seu projeto
+            <ArrowUpRight size={16} strokeWidth={1.8} aria-hidden="true" />
           </button>
-          {/* <button className="font-medium cursor-pointer border border-gray-400 hover:bg-primary-color hover:text-white transition-all duration-200 ease-in p-3 px-4 rounded-md hover:shadow-2xl ">
-              Soluções sob medida
-            </button> */}
+          <button className="inline-flex cursor-pointer items-center gap-2 rounded-md p-3 px-4 font-medium text-gray-400 transition-all duration-200 ease-in hover:bg-primary-color hover:text-white hover:shadow-2xl">
+            Soluções sob medida
+          
+          </button>
         </div>
       </div>
 
@@ -71,6 +62,9 @@ export function Hero() {
         <span>Scroll to explore</span>
         <span className="h-8 w-px bg-gray-400" />
       </div>
+
+     
+
     </section>
   );
 }
