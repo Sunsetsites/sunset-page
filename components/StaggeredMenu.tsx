@@ -1,5 +1,6 @@
 import React, { useCallback, useLayoutEffect, useRef, useState } from 'react';
 import { gsap } from 'gsap';
+import { AtSign, Globe } from 'lucide-react';
 
 export interface StaggeredMenuItem {
   label: string;
@@ -60,7 +61,7 @@ export const StaggeredMenu: React.FC<StaggeredMenuProps> = ({
 
   const textInnerRef = useRef<HTMLSpanElement | null>(null);
   const textWrapRef = useRef<HTMLSpanElement | null>(null);
-  const [textLines, setTextLines] = useState<string[]>(['Menu', 'Close']);
+  const [textLines, setTextLines] = useState<string[]>(['Menu', 'Fechar']);
 
   const openTlRef = useRef<gsap.core.Timeline | null>(null);
   const closeTweenRef = useRef<gsap.core.Tween | null>(null);
@@ -306,8 +307,8 @@ export const StaggeredMenu: React.FC<StaggeredMenuProps> = ({
 
     textCycleAnimRef.current?.kill();
 
-    const currentLabel = opening ? 'Menu' : 'Close';
-    const targetLabel = opening ? 'Close' : 'Menu';
+    const currentLabel = opening ? 'Menu' : 'Fechar';
+    const targetLabel = opening ? 'Fechar' : 'Menu';
     const cycles = 3;
 
     const seq: string[] = [currentLabel];
@@ -448,7 +449,7 @@ export const StaggeredMenu: React.FC<StaggeredMenuProps> = ({
             className={`sm-toggle relative inline-flex items-center gap-[0.3rem] bg-transparent border-0 cursor-pointer font-medium leading-none overflow-visible pointer-events-auto ${
               open ? 'text-black' : 'text-[#e9e9ef]'
             }`}
-            aria-label={open ? 'Close menu' : 'Open menu'}
+            aria-label={open ? 'Fechar menu' : 'Abrir menu'}
             aria-expanded={open}
             aria-controls="staggered-menu-panel"
             onClick={toggleMenu}
@@ -524,28 +525,40 @@ export const StaggeredMenu: React.FC<StaggeredMenuProps> = ({
               )}
             </ul>
 
-            {displaySocials && socialItems && socialItems.length > 0 && (
-              <div className="sm-socials mt-auto pt-8 flex flex-col gap-3" aria-label="Social links">
-                <h3 className="sm-socials-title m-0 text-sm font-medium [color:var(--sm-accent,#ff0000)]">Socials</h3>
-                <ul
-                  className="sm-socials-list list-none m-0 p-0 flex flex-row items-center gap-4 flex-wrap"
-                  role="list"
-                >
-                  {socialItems.map((s, i) => (
-                    <li key={s.label + i} className="sm-socials-item">
-                      <a
-                        href={s.link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="sm-socials-link text-[0.95rem] font-medium text-[#111] no-underline relative inline-block py-[2px] transition-[color,opacity] duration-300 ease-linear"
-                      >
-                        {s.label}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
+            <div className="sm-panel-footer">
+              <div className="sm-contact-block" aria-label="Contato">
+                <p className="sm-contact-eyebrow">Vamos conversar?</p>
+                <p className="sm-contact-copy">
+                  Conte seu projeto e descubra como podemos transformar ideias em soluções inteligentes.
+                </p>
+                <a className="sm-contact-link" href="#contato" onClick={closeMenu}>
+                  Entrar em contato
+                  <span aria-hidden="true">↗</span>
+                </a>
               </div>
-            )}
+
+              {displaySocials && socialItems && socialItems.length > 0 && (
+                <div className="sm-socials" aria-label="Redes sociais">
+                  <ul className="sm-socials-list" role="list">
+                    {socialItems.map((s, i) => (
+                      <li key={s.label + i} className="sm-socials-item">
+                        <a
+                          href={s.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="sm-socials-link"
+                          aria-label={s.label}
+                          title={s.label}
+                        >
+                          {s.label.toLowerCase().includes('instagram') && <AtSign size={16} strokeWidth={2} aria-hidden="true" />}
+                          {s.label.toLowerCase().includes('linkedin') && <Globe size={16} strokeWidth={2} aria-hidden="true" />}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+            </div>
           </div>
         </aside>
       </div>
@@ -573,19 +586,25 @@ export const StaggeredMenu: React.FC<StaggeredMenuProps> = ({
 .sm-scope [data-position='left'] .sm-prelayers { right: auto; left: 0; }
 .sm-scope .sm-prelayer { position: absolute; top: 0; right: 0; height: 100%; width: 100%; transform: translateX(0); }
 .sm-scope .sm-panel-inner { flex: 1; display: flex; flex-direction: column; gap: 1.25rem; }
-.sm-scope .sm-socials { margin-top: auto; padding-top: 2rem; display: flex; flex-direction: column; gap: 0.75rem; }
+.sm-scope .sm-panel-footer { margin-top: auto; }
+.sm-scope .sm-socials { padding-top: 1.25rem; }
 .sm-scope .sm-socials-title { margin: 0; font-family: "Michroma", sans-serif; font-size: 0.75rem; font-weight: 500; color: var(--sm-accent, #ff0000); }
-.sm-scope .sm-socials-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: row; align-items: center; gap: 1rem; flex-wrap: wrap; }
+.sm-scope .sm-socials-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: row; align-items: center; gap: 1.25rem; flex-wrap: wrap; }
 .sm-scope .sm-socials-list .sm-socials-link { opacity: 1; transition: opacity 0.3s ease; }
 .sm-scope .sm-socials-list:hover .sm-socials-link:not(:hover) { opacity: 0.35; }
 .sm-scope .sm-socials-list:focus-within .sm-socials-link:not(:focus-visible) { opacity: 0.35; }
 .sm-scope .sm-socials-list .sm-socials-link:hover,
 .sm-scope .sm-socials-list .sm-socials-link:focus-visible { opacity: 1; }
 .sm-scope .sm-socials-link:focus-visible { outline: 2px solid var(--sm-accent, #ff0000); outline-offset: 3px; }
-.sm-scope .sm-socials-link { font-family: "Michroma", sans-serif; font-size: 0.8rem; font-weight: 500; color: #111; text-decoration: none; position: relative; padding: 2px 0; display: inline-block; transition: color 0.3s ease, opacity 0.3s ease; }
+.sm-scope .sm-socials-link { font-family: "Sora", sans-serif; font-size: 0.8rem; font-weight: 500; color: #111; text-decoration: none; position: relative; padding: 2px 0; display: inline-flex; align-items: center; transition: color 0.3s ease, opacity 0.3s ease; }
 .sm-scope .sm-socials-link:hover { color: var(--sm-accent, #ff0000); }
 .sm-scope .sm-panel-title { margin: 0; font-size: 1rem; font-weight: 600; color: #fff; text-transform: uppercase; }
 .sm-scope .sm-panel-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 0.5rem; }
+.sm-scope .sm-contact-block { padding: 2rem 0 0; border-top: 1px solid rgba(23, 23, 25, 0.1); }
+.sm-scope .sm-contact-eyebrow { margin: 0 0 0.65rem; color: #171719; font-family: "Sora", sans-serif; font-size: 0.7rem; font-weight: 700; text-transform: uppercase; }
+.sm-scope .sm-contact-copy { max-width: 270px; margin: 0 0 1.25rem; color: #7a7a7a; font-family: "Sora", sans-serif; font-size: 0.68rem; line-height: 1.55; }
+.sm-scope .sm-contact-link { display: flex; align-items: center; justify-content: space-between; max-width: 190px; min-height: 2.5rem; padding: 0.65rem 0.85rem; border: 1px solid #171719; border-radius: 0.35rem; color: #171719; font-family: "Sora", sans-serif; font-size: 0.65rem; font-weight: 600; text-decoration: none; text-transform: uppercase; transition: color 0.2s, background 0.2s; }
+.sm-scope .sm-contact-link:hover { background: #171719; color: #fff; }
 .sm-scope .sm-panel-link { font-family: "Michroma", sans-serif; }
 .sm-scope .sm-panel-item { position: relative; color: #000; font-family: "Michroma", sans-serif; font-weight: 600; font-size: 2.8rem; cursor: pointer; line-height: 1; letter-spacing: -1px; text-transform: uppercase; transition: background 0.25s, color 0.25s; display: inline-block; text-decoration: none; padding-right: 1.4em; }
 .sm-scope .sm-panel-itemLabel { display: inline-block; will-change: transform; transform-origin: 50% 100%; }
@@ -593,7 +612,7 @@ export const StaggeredMenu: React.FC<StaggeredMenuProps> = ({
 .sm-scope .sm-panel-list[data-numbering] { counter-reset: smItem; }
 .sm-scope .sm-panel-list[data-numbering] .sm-panel-item::after { counter-increment: smItem; content: counter(smItem, decimal-leading-zero); position: absolute; top: 0.1em; right: 3.2em; font-size: 18px; font-weight: 400; color: var(--sm-accent, #ff0000); letter-spacing: 0; pointer-events: none; user-select: none; opacity: var(--sm-num-opacity, 0); }
 @media (max-width: 1024px) { .sm-scope .staggered-menu-header { padding: 1.25rem 1.5rem; } .sm-scope .staggered-menu-panel { width: min(88vw, 420px); padding: 6.5rem 1.5rem 1.5rem; } .sm-scope .sm-panel-item { font-size: clamp(2rem, 8vw, 2.8rem); letter-spacing: -1px; } .sm-scope .sm-panel-list[data-numbering] .sm-panel-item { display: flex; align-items: flex-start; padding-right: 0; } .sm-scope .sm-panel-list[data-numbering] .sm-panel-item::after { position: static; margin-left: 0.75rem; padding-top: 0.15em; font-size: 0.65rem; line-height: 1; } }
-@media (max-width: 640px) { .sm-scope .staggered-menu-header { padding: 1rem 1.25rem; } .sm-scope .staggered-menu-panel, .sm-scope .sm-prelayers { width: 100vw; } .sm-scope .staggered-menu-panel { padding: 5.5rem 1.25rem 1.25rem; } .sm-scope .sm-panel-list { gap: 0.75rem; } .sm-scope .sm-panel-item { font-size: clamp(1.55rem, 8.5vw, 2.1rem); } .sm-scope .sm-socials { padding-top: 1.5rem; } .sm-scope .sm-socials-link { font-size: 0.7rem; } }
+@media (max-width: 640px) { .sm-scope .staggered-menu-header { top: 0; left: 0; width: 100vw; padding: 1rem 1.25rem; } .sm-scope .sm-panel-inner { gap: 1rem; } .sm-scope .staggered-menu-panel, .sm-scope .sm-prelayers { width: 100vw; } .sm-scope .staggered-menu-panel { right: 0; border-radius: 0; padding: 5.5rem 1.25rem 1.25rem; } .sm-scope .sm-panel-list { gap: 1rem; } .sm-scope .sm-panel-item { font-size: clamp(1.55rem, 8.5vw, 2.1rem); } .sm-scope .sm-contact-block { padding-top: 1.5rem; } .sm-scope .sm-socials { padding-top: 1rem; } .sm-scope .sm-socials-link { font-size: 0.7rem; } }
       `}</style>
     </div>
   );
