@@ -40,7 +40,6 @@ const questions = [
     answer:
       "Claro. O projeto passa por etapas de revisão para ajustarmos os detalhes até a solução fazer sentido para sua marca.",
   },
-  
 ];
 
 export default function Faq() {
@@ -67,27 +66,30 @@ export default function Faq() {
                 animateOn="hover"
               />
             </p>
-          <h2 className="max-w-md text-3xl md:text-4xl leading-8 font-medium text-gray-900 sm:text-4xl md:leading-12 text-center md:text-start">
-            Clareza faz parte
-            <br />
-            da <span className="text-primary-color">entrega.</span>
-          </h2>
-          <p className="mt-4 text-center md:text-start text-sm leading-6 text-[#64748b]">
-            Se a sua pergunta não estiver aqui, mande uma mensagem. A conversa
-            começa sem compromisso.
-          </p>
+            <h2 className="max-w-md text-3xl md:text-4xl leading-8 font-medium text-gray-900 sm:text-4xl md:leading-12 text-center md:text-start">
+              Clareza faz parte
+              <br />
+              da <span className="text-primary-color">entrega.</span>
+            </h2>
+            <p className="mt-4 text-center md:text-start text-sm leading-6 text-[#64748b]">
+              Se a sua pergunta não estiver aqui, mande uma mensagem. A conversa
+              começa sem compromisso.
+            </p>
           </div>
         </div>
 
-        <div className="border-t border-[#17223b]/15">
+        <div >
           {questions.map((item, index) => {
             const isOpen = openIndex === index;
 
             return (
-              <div key={item.question} className="border-b border-[#17223b]/15">
+              <div
+                key={item.question}
+                className={`border-b border-[#17223b]/5 border-l-3 transition-colors duration-300 ${isOpen ? "border-l-primary-color" : "border-l-[#17223b]/10"}`}
+              >
                 <button
                   type="button"
-                  className="flex w-full items-center justify-between gap-5 py-6 text-left text-sm font-semibold transition-colors hover:text-primary-color md:text-base"
+                  className="flex w-full items-center justify-between gap-5 py-6 pl-4 text-left text-sm font-semibold transition-colors hover:text-primary-color md:pl-5 md:text-base"
                   aria-expanded={isOpen}
                   onClick={() => setOpenIndex(isOpen ? null : index)}
                 >
@@ -102,7 +104,7 @@ export default function Faq() {
                 <div
                   className={`grid transition-[grid-template-rows,opacity] duration-300 ${isOpen ? "grid-rows-[1fr] pb-6 opacity-100" : "grid-rows-[0fr] opacity-0"}`}
                 >
-                  <p className="min-h-0 overflow-hidden max-w-2xl text-sm leading-6 text-[#64748b]">
+                  <p className="min-h-0 max-w-2xl overflow-hidden pl-4 text-sm leading-6 text-[#64748b] md:pl-5">
                     {item.answer}
                   </p>
                 </div>

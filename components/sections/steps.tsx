@@ -98,14 +98,14 @@ export default function Steps() {
               <div className="flex h-full flex-col justify-between gap-10 border-t border-b lg:border-b-0  border-r border-gray-200 p-10 group">
                 <div className="flex items-start justify-between border-b border-gray-200/80 pb-4">
                   <div className="flex items-baseline gap-2 font-mono">
-                    <span className="text-5xl font-medium leading-none tracking-[-0.12em] text-gray-300 transition group-hover:text-primary-color">
+                    <span className="text-5xl font-medium text-primary-color  leading-none tracking-[-0.12em] md:text-gray-300 transition group-hover:text-primary-color">
                       N{index + 1}
                     </span>
                     <span className="text-[10px] font-semibold tracking-widest text-gray-400">
                       / 04
                     </span>
                   </div>
-                  <span className="font-mono text-[9px] font-semibold uppercase tracking-[0.2em] text-gray-400 transition group-hover:text-primary-color">
+                  <span className="font-mono text-[9px] font-semibold uppercase tracking-[0.2em] text-primary-color md:text-gray-400 transition group-hover:text-primary-color">
                     SYS.N{index + 1}
                   </span>
                 </div>
@@ -120,7 +120,7 @@ export default function Steps() {
                 <step.icon
                   size={28}
                   strokeWidth={1.5}
-                  className="text-gray-400 transition group-hover:text-primary-color"
+                  className="md:text-gray-400 text-primary-color transition group-hover:text-primary-color"
                   aria-hidden="true"
                 />
               </div>

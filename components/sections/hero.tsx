@@ -35,7 +35,7 @@ export function Hero() {
             animateOn="hover"
           />
         </p>
-        <h1 className="max-w-4xl text-[clamp(2rem,9vw,3rem)] uppercase leading-[1.15] sm:text-4xl md:text-5xl md:leading-tight">
+        <h1 className="max-w-4xl ] uppercase leading-10 text-3xl  md:text-5xl md:leading-tight">
           Seu negócio merece uma presença digital à altura.
         </h1>
 

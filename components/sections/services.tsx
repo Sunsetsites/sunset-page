@@ -184,9 +184,9 @@ export default function Services() {
         >
           {serviceCards.map((card, index) => (
             <SwiperSlide key={index} className={`h-auto slide-${index}`}>
-              <SpotlightCard
-                className="group card-service !h-[390px] md:!h-[480px] bg-white/3 "
-                spotlightColor="rgba(255, 255, 255, 0.2)"
+              <div
+                className="group card-service h-97.5! md:h-120! bg-white/3 border p-8 border-neutral-800 rounded-2xl"
+               
               >
                 <div className=" flex  flex-col gap-5 justify-between h-full">
                   <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-white/5 text-white transition group-hover:bg-primary-color group-hover:duration-300">
@@ -216,7 +216,7 @@ export default function Services() {
                     </a>
                   </div>
                 </div>
-              </SpotlightCard>
+              </div>
             </SwiperSlide>
           ))}
         </Swipper>

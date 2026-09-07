@@ -102,7 +102,7 @@ export function Depoiments() {
           speed={5000}
           breakpoints={{
             550: {
-              slidesPerView: 1.5,
+              slidesPerView: 2.5,
             },
             640: {
               slidesPerView: 2,
