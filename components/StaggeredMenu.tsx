@@ -439,7 +439,7 @@ export const StaggeredMenu: React.FC<StaggeredMenuProps> = ({
               width={110}
               height={24}
             />
-             <span className="text-sm capitalize tracking-widest ml-2">
+             <span className="sm-logo-wordmark text-sm capitalize tracking-widest ml-2">
               sunset<span className="text-[#ff6b4a]">.</span>
             </span>
           </div>
@@ -568,6 +568,8 @@ export const StaggeredMenu: React.FC<StaggeredMenuProps> = ({
 .sm-scope .staggered-menu-header { position: absolute; top: 0; left: 0; width: 100%; display: flex; align-items: center; justify-content: space-between; padding: 2em; background: transparent; pointer-events: none; z-index: 20; }
 .sm-scope .staggered-menu-header > * { pointer-events: auto; }
 .sm-scope .sm-logo { display: flex; align-items: center; user-select: none; }
+.sm-scope .sm-logo-wordmark { color: #171719; }
+.sm-scope .staggered-menu-wrapper[data-open] .sm-logo-wordmark { color: #ffffff; }
 .sm-scope .sm-logo-img { display: block; height: 32px; width: auto; object-fit: contain; }
 .sm-scope .sm-toggle { position: relative; display: inline-flex; align-items: center; gap: 0.3rem; background: transparent; border: none; cursor: pointer; color: #e9e9ef; font-family: "Michroma", sans-serif; font-size: 0.7rem; font-weight: 500; line-height: 1; overflow: visible; }
 .sm-scope .sm-toggle:focus-visible { outline: 2px solid #ffffffaa; outline-offset: 4px; border-radius: 4px; }

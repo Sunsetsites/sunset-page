@@ -1,4 +1,3 @@
-import DecryptedText from "@/components/ui/descript-text";
 import { useRef, type MouseEvent } from "react";
 
 export function Hero() {
@@ -23,17 +22,7 @@ export function Hero() {
 
       <div className="relative flex w-full max-w-4xl flex-col items-center justify-center gap-7 text-center sm:gap-9">
         <p className="text-[10px] uppercase tracking-[0.24em] sm:text-xs sm:tracking-widest">
-          <DecryptedText
-            text="{ DIGITAL INNOVATION }"
-            speed={100}
-            maxIterations={10}
-            characters="IDGITALINNOVATION"
-            className="revealed"
-            parentClassName="all-letters"
-            encryptedClassName="encrypted"
-            sequential={true}
-            animateOn="hover"
-          />
+          <span className="text-[#ff6b4a]">{"{"}</span>{" DIGITAL INNOVATION "}<span className="text-[#ff6b4a]">{"}"}</span>
         </p>
         <h1 className="max-w-4xl ] uppercase leading-10 text-3xl  md:text-5xl md:leading-tight">
           Seu negócio merece uma presença digital à altura.

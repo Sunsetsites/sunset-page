@@ -2,7 +2,6 @@
 
 import { ChevronDown } from "lucide-react";
 import { useState } from "react";
-import DecryptedText from "../ui/descript-text";
 
 const questions = [
   {
@@ -54,17 +53,7 @@ export default function Faq() {
         <div className="lg:pt-2">
           <div className="mb-7 flex flex-col items-center gap-3  text-primary-color justify-center md:justify-start md:items-start">
             <p className="text-xs">
-              <DecryptedText
-                text="{ Dúvidas frequentes }"
-                speed={100}
-                maxIterations={10}
-                characters="dúvFreqentes"
-                className="revealed"
-                parentClassName="all-letters"
-                encryptedClassName="encrypted"
-                sequential={true}
-                animateOn="hover"
-              />
+              <span className="text-[#ff6b4a]">{"{"}</span>{" Dúvidas frequentes "}<span className="text-[#ff6b4a]">{"}"}</span>
             </p>
             <h2 className="max-w-md text-3xl md:text-4xl leading-8 font-medium text-gray-900 sm:text-4xl md:leading-12 text-center md:text-start">
               Clareza faz parte

@@ -5,7 +5,6 @@ import ShinyText from "../ui/shiny-text";
 import SpotlightCard from "../ui/SpotlightCard";
 import Swipper from "../ui/swipper";
 import { useEffect, useState } from "react";
-import DecryptedText from "../ui/descript-text";
 
 export function Depoiments() {
   const [largura, setLargura] = useState(0);
@@ -45,17 +44,7 @@ export function Depoiments() {
     >
       <div className="relative z-10 flex gap-6  flex-col w-full justify-center md:justify-start  lg:max-w-lg">
          <p className="uppercase tracking-widest  ml-2 text-center md:text-start text-xs ">
-                  <DecryptedText
-                    text="{ Depoimentos }"
-                    speed={100}
-                    maxIterations={10}
-                    characters="IDGITALINNOVATION"
-                    className="revealed"
-                    parentClassName="all-letters"
-                    encryptedClassName="encrypted"
-                    sequential={true}
-                    animateOn="hover"
-                  />
+                  <span className="text-[#ff6b4a]">{"{"}</span>{" Depoimentos "}<span className="text-[#ff6b4a]">{"}"}</span>
                 </p>
         <h2 className="text-3xl  text-center md:text-start md:text-4xl  w-full  lg:max-w-2xl lg:leading-12 font-medium">
           <ShinyText

@@ -2,7 +2,6 @@ import { SwiperSlide } from "swiper/react";
 import { Check, MessageCircle, PanelsTopLeft, Rocket } from "lucide-react";
 import ShinyText from "../ui/shiny-text";
 import Swipper from "../ui/swipper";
-import DecryptedText from "../ui/descript-text";
 
 export default function Steps() {
   const steps = [
@@ -35,17 +34,7 @@ export default function Steps() {
        
 
         <p className="uppercase tracking-widest  ml-2 text-xs mb-6  text-center  w-full md:text-start">
-          <DecryptedText
-            text="{ NOSSO PROCESSO }"
-            speed={100}
-            maxIterations={10}
-            characters="dSiuõçogsital"
-            className="revealed"
-            parentClassName="all-letters"
-            encryptedClassName="encrypted"
-            sequential={true}
-            animateOn="hover"
-          />
+          <span className="text-[#ff6b4a]">{"{"}</span>{" NOSSO PROCESSO "}<span className="text-[#ff6b4a]">{"}"}</span>
         </p>
         <div className="flex  items-center w-full gap-6 justify-center md:justify-start">
           <h2 className="text-3xl md:max-w-full md:text-4xl font-medium text-center ">
@@ -102,7 +91,7 @@ export default function Steps() {
                       N{index + 1}
                     </span>
                     <span className="text-[10px] font-semibold tracking-widest text-gray-400">
-                      / 04
+                      <span className="text-accent-color">/</span> 04
                     </span>
                   </div>
                   <span className="font-mono text-[9px] font-semibold uppercase tracking-[0.2em] text-primary-color md:text-gray-400 transition group-hover:text-primary-color">

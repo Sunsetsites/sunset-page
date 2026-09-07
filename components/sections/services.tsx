@@ -4,7 +4,6 @@ import ShinyText from "../ui/shiny-text";
 import SpotlightCard from "../ui/SpotlightCard";
 import Swipper from "../ui/swipper";
 import { SwiperSlide } from "swiper/react";
-import DecryptedText from "../ui/descript-text";
 import TextType from "../ui/TextType";
 
 export default function Services() {
@@ -122,17 +121,7 @@ export default function Services() {
     <div className="relative w-full flex flex-col px-4 md:px-10 2xl:px-20 max-w-[1700px]">
       <div className="flex  flex-col gap-4 ">
         <p className="uppercase tracking-widest 2 ml-2 text-xs text-center md:text-start">
-          <DecryptedText
-            text="{ Soluções digitais }"
-            speed={100}
-            maxIterations={10}
-            characters="dSiuõçogsital"
-            className="revealed"
-            parentClassName="all-letters"
-            encryptedClassName="encrypted"
-            sequential={true}
-            animateOn="hover"
-          />
+          <span className="text-[#ff6b4a]">{"{"}</span>{" Soluções digitais "}<span className="text-[#ff6b4a]">{"}"}</span>
         </p>
         <div className="flex justify-center md:justify-start items-center gap-10">
           <h2 className="text-center text-2xl font-medium md:text-start lg:text-4xl lg:leading-14  ">
@@ -224,17 +213,7 @@ export default function Services() {
 
       <div className="mt-20 flex w-full flex-col gap-6 md:flex-row md:items-center 2xl:px-10">
         <p className="shrink-0 uppercase tracking-widest ml-2 text-xs text-center md:text-start">
-          <DecryptedText
-            text="{ Tecnologias utilizadas }"
-            speed={100}
-            maxIterations={10}
-            characters="Tecnologiasutilizadas"
-            className="revealed"
-            parentClassName="all-letters"
-            encryptedClassName="encrypted"
-            sequential={true}
-            animateOn="hover"
-          />
+          <span className="text-[#ff6b4a]">{"{"}</span>{" Tecnologias utilizadas "}<span className="text-[#ff6b4a]">{"}"}</span>
         </p>
         <LogoLoop
           logos={tecnologias}
