@@ -384,7 +384,7 @@ export const StaggeredMenu: React.FC<StaggeredMenuProps> = ({
 
   return (
     <div
-      className={`sm-scope z-40 ${isFixed ? 'fixed top-0 left-0 w-screen h-screen overflow-hidden' : 'w-full h-full'}`}
+      className={`sm-scope z-40 pointer-events-none ${isFixed ? 'fixed top-0 left-0 w-screen h-screen overflow-hidden' : 'w-full h-full'}`}
     >
       <div
         className={
@@ -564,6 +564,7 @@ export const StaggeredMenu: React.FC<StaggeredMenuProps> = ({
 .sm-scope .sm-icon-line { position: absolute; left: 50%; top: 50%; width: 100%; height: 2px; background: currentColor; border-radius: 2px; transform: translate(-50%, -50%); will-change: transform; }
 .sm-scope .sm-line { display: none !important; }
 .sm-scope .staggered-menu-panel { position: absolute; top: 0; right: 0; width: clamp(260px, 38vw, 420px); height: 100%; background: white; backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); display: flex; flex-direction: column; padding: 6em 2em 2em 2em; overflow-y: auto; z-index: 10; }
+.sm-scope .staggered-menu-wrapper:not([data-open]) .staggered-menu-panel { pointer-events: none; visibility: hidden; }
 .sm-scope [data-position='left'] .staggered-menu-panel { right: auto; left: 0; }
 .sm-scope .sm-prelayers { position: absolute; top: 0; right: 0; bottom: 0; width: clamp(260px, 38vw, 420px); pointer-events: none; z-index: 5; }
 .sm-scope [data-position='left'] .sm-prelayers { right: auto; left: 0; }
@@ -587,7 +588,7 @@ export const StaggeredMenu: React.FC<StaggeredMenuProps> = ({
 .sm-scope .sm-panel-item:hover { color: var(--sm-accent, #ff0000); }
 .sm-scope .sm-panel-list[data-numbering] { counter-reset: smItem; }
 .sm-scope .sm-panel-list[data-numbering] .sm-panel-item::after { counter-increment: smItem; content: counter(smItem, decimal-leading-zero); position: absolute; top: 0.1em; right: 3.2em; font-size: 18px; font-weight: 400; color: var(--sm-accent, #ff0000); letter-spacing: 0; pointer-events: none; user-select: none; opacity: var(--sm-num-opacity, 0); }
-@media (max-width: 1024px) { .sm-scope .staggered-menu-header { padding: 1.25rem 1.5rem; } .sm-scope .staggered-menu-panel { width: min(88vw, 420px); padding: 6.5rem 1.5rem 1.5rem; } .sm-scope .sm-panel-item { font-size: clamp(2.5rem, 10vw, 4rem); letter-spacing: -1px; } }
+@media (max-width: 1024px) { .sm-scope .staggered-menu-header { padding: 1.25rem 1.5rem; } .sm-scope .staggered-menu-panel { width: min(88vw, 420px); padding: 6.5rem 1.5rem 1.5rem; } .sm-scope .sm-panel-item { font-size: clamp(2.5rem, 10vw, 4rem); letter-spacing: -1px; } .sm-scope .sm-panel-list[data-numbering] .sm-panel-item { display: flex; align-items: flex-start; padding-right: 0; } .sm-scope .sm-panel-list[data-numbering] .sm-panel-item::after { position: static; margin-left: 0.75rem; padding-top: 0.15em; font-size: 0.75rem; line-height: 1; } }
 @media (max-width: 640px) { .sm-scope .staggered-menu-header { padding: 1rem 1.25rem; } .sm-scope .staggered-menu-panel { width: min(88vw, 360px); padding: 5.5rem 1.25rem 1.25rem; } .sm-scope .sm-panel-list { gap: 0.75rem; } .sm-scope .sm-panel-item { font-size: clamp(2rem, 11vw, 3rem); } .sm-scope .sm-socials { padding-top: 1.5rem; } .sm-scope .sm-socials-link { font-size: 1rem; } }
       `}</style>
     </div>

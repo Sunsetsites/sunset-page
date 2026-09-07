@@ -21,7 +21,7 @@ export function Header() {
       ]}
       displaySocials
       displayItemNumbering
-      isFixed
+      isFixed={true}
       menuButtonColor="#171719"
       openMenuButtonColor="#171719"
       changeMenuColorOnOpen
