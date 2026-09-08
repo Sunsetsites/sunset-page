@@ -43,13 +43,10 @@ export function Header() {
             ))}
           </nav>
 
-          <a
-            href="#contato"
-            className="flex h-11 shrink-0 items-center justify-center gap-2 rounded-full bg-[#171719] px-5 font-sans text-[10px] font-bold uppercase tracking-[0.06em] text-white transition-all duration-300 hover:-translate-y-0.5 "
-          >
+          <button className="text-sm  bg-primary-color  text-white font-semibold py-3 px-4 rounded-md transition-colors duration-300 flex items-center gap-2 justify-center cursor-pointer hover:shadow-2xl">
             Comece seu projeto
-            <ArrowUpRight size={15} strokeWidth={1.8} aria-hidden="true" />
-          </a>
+            <ArrowUpRight size={16} strokeWidth={1.8} aria-hidden="true" />
+          </button>
         </div>
       </header>
 

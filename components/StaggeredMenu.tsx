@@ -80,12 +80,9 @@ export const StaggeredMenu: React.FC<StaggeredMenuProps> = ({
       const panel = panelRef.current;
       const preContainer = preLayersRef.current;
 
-      const plusH = plusHRef.current;
-      const plusV = plusVRef.current;
-      const icon = iconRef.current;
       const textInner = textInnerRef.current;
 
-      if (!panel || !plusH || !plusV || !icon || !textInner) return;
+      if (!panel) return;
 
       let preLayers: HTMLElement[] = [];
       if (preContainer) {
@@ -99,11 +96,11 @@ export const StaggeredMenu: React.FC<StaggeredMenuProps> = ({
         gsap.set(preContainer, { xPercent: 0, opacity: 1 });
       }
 
-      gsap.set(plusH, { transformOrigin: '50% 50%', rotate: 0 });
-      gsap.set(plusV, { transformOrigin: '50% 50%', rotate: 90 });
-      gsap.set(icon, { rotate: 0, transformOrigin: '50% 50%' });
+      if (plusHRef.current) gsap.set(plusHRef.current, { transformOrigin: '50% 50%', rotate: 0 });
+      if (plusVRef.current) gsap.set(plusVRef.current, { transformOrigin: '50% 50%', rotate: 90 });
+      if (iconRef.current) gsap.set(iconRef.current, { rotate: 0, transformOrigin: '50% 50%' });
 
-      gsap.set(textInner, { yPercent: 0 });
+      if (textInner) gsap.set(textInner, { yPercent: 0 });
 
       if (toggleBtnRef.current) gsap.set(toggleBtnRef.current, { color: menuButtonColor });
     });

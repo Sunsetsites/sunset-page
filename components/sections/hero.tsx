@@ -21,7 +21,7 @@ export function Hero() {
     >
       <div className="hero-glow" aria-hidden="true" />
 
-      <div className="relative flex w-full max-w-4xl flex-col items-center justify-center gap-12 text-center ">
+      <div className="relative flex w-full max-w-4xl flex-col items-center justify-center gap-6 md:gap-12 text-center ">
         <p className="text-[10px] uppercase tracking-[0.24em] sm:text-xs sm:tracking-widest">
           <span className="text-[#ff6b4a]">{"{"}</span>{" DIGITAL INNOVATION "}<span className="text-[#ff6b4a]">{"}"}</span>
         </p>
