@@ -118,7 +118,7 @@ export default function Services() {
   ];
 
   return (
-    <div className="relative w-full flex flex-col px-4 md:px-10 2xl:px-20 max-w-[1700px]">
+    <div className="relative w-full flex flex-col px-2 md:px-10 2xl:px-20 max-w-[1700px]">
       <div className="flex  flex-col gap-4 ">
         <p className="uppercase tracking-widest 2 ml-2 text-xs text-center md:text-start">
           <span className="text-[#ff6b4a]">{"{"}</span>{" Soluções digitais "}<span className="text-[#ff6b4a]">{"}"}</span>
@@ -142,73 +142,75 @@ export default function Services() {
           <hr className="flex-1 border-white/10 hidden md:block" />
         </div>
 
-        <p className="max-w-xl  text-center md:text-start text-gray-300 text-sm md:text-base  font-light ">
+        <p className="max-w-xl px-5 text-center md:text-start text-gray-300 text-sm md:text-base  font-light ">
           Desenvolvemos soluções digitais sob medida que unem tecnologia e
           inovação para transformar ideias em resultados reais.
         </p>
       </div>
 
    
-        <Swipper
-          loop={false}
-          direction="horizontal"
-          pagination
-          breakpoints={{
-            550: {
-              slidesPerView: 1.5,
-            },
-            640: {
-              slidesPerView: 2,
-            },
-            692: {
-              slidesPerView: 2,
-            },
-            768: {
-              slidesPerView: 2.3,
-            },
-            1024: {
-              slidesPerView: 4,
-            },
-          }}
-        >
-          {serviceCards.map((card, index) => (
-            <SwiperSlide key={index} className={`h-auto slide-${index}`}>
-              <div
-                className="group card-service h-97.5! md:h-120! bg-white/3 border p-8 border-neutral-800 rounded-2xl"
-               
-              >
-                <div className=" flex  flex-col gap-5 justify-between h-full">
-                  <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-white/5 text-white transition group-hover:bg-primary-color group-hover:duration-300">
-                    {card.icon}
-                  </div>
-                  <div className="flex flex-col justify-center gap-3">
-                    <h3 className="text-md font-medium uppercase">
-                      <TextType
-                        text={card.title}
-                        typingSpeed={75}
-                        pauseDuration={10800}
-                        showCursor
-                        cursorCharacter="!"
-                        deletingSpeed={50}
-                        cursorBlinkDuration={0.5}
-                      />
-                    </h3>
-                    <p className="2xl:h-6 md:h-14 h-10 text-xs leading-5 text-gray-400">
-                      {card.description}
-                    </p>
-                    <a
-                      href="#contato"
-                      className="mt-10 flex flex-1 items-center justify-center gap-2 rounded-full bg-white p-3 px-10 text-center text-sm font-medium text-black "
-                    >
-                      <span className="text-sm font-medium text-black shrink-0">Começar meu projeto</span>
-                      <span aria-hidden="true">↗</span>
-                    </a>
+        <div className="px-4">
+          <Swipper
+            loop={false}
+            direction="horizontal"
+            pagination
+            breakpoints={{
+              550: {
+                slidesPerView: 1.5,
+              },
+              640: {
+                slidesPerView: 2,
+              },
+              692: {
+                slidesPerView: 2,
+              },
+              768: {
+                slidesPerView: 2.3,
+              },
+              1024: {
+                slidesPerView: 4,
+              },
+            }}
+          >
+            {serviceCards.map((card, index) => (
+              <SwiperSlide key={index} className={`h-auto slide-${index}`}>
+                <div
+                  className="group card-service h-97.5! md:h-120! bg-white/3 border p-8 border-neutral-800 rounded-2xl"
+          
+                >
+                  <div className=" flex  flex-col gap-5 justify-between h-full">
+                    <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-white/5 text-white transition group-hover:bg-primary-color group-hover:duration-300">
+                      {card.icon}
+                    </div>
+                    <div className="flex flex-col justify-center gap-3">
+                      <h3 className="text-md font-medium uppercase">
+                        <TextType
+                          text={card.title}
+                          typingSpeed={75}
+                          pauseDuration={10800}
+                          showCursor
+                          cursorCharacter="!"
+                          deletingSpeed={50}
+                          cursorBlinkDuration={0.5}
+                        />
+                      </h3>
+                      <p className="2xl:h-6 md:h-14 h-10 text-xs leading-5 text-gray-400">
+                        {card.description}
+                      </p>
+                      <a
+                        href="#contato"
+                        className="mt-10 flex flex-1 items-center justify-center gap-2 rounded-full bg-white p-3 px-10 text-center text-sm font-medium text-black "
+                      >
+                        <span className="text-sm font-medium text-black shrink-0">Começar meu projeto</span>
+                        <span aria-hidden="true">↗</span>
+                      </a>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </SwiperSlide>
-          ))}
-        </Swipper>
+              </SwiperSlide>
+            ))}
+          </Swipper>
+        </div>
     
 
       <div className="mt-15 flex w-full flex-col gap-6 md:flex-row md:items-center 2xl:px-10">

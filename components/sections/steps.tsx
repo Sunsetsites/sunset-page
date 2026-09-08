@@ -28,12 +28,11 @@ export default function Steps() {
   ];
 
   return (
-    <section className="flex flex-col  w-full gap-4 py-20 md:py-40 px-4 md:px-10 2xl:px-20 max-w-[1700px] mx-auto">
+    <section className="flex flex-col   w-full gap-4 py-20 md:py-40 px-2 md:px-10 2xl:px-20 max-w-[1700px] mx-auto">
       <div className="flex items-center flex-col  justify-center md:justify-start md:items-start  ">
        
-       
-
-        <p className="uppercase tracking-widest  ml-2 text-xs mb-6  text-center  w-full md:text-start">
+    
+        <p className="uppercase tracking-widest  ml-2 text-xs mb-4 mt-6  text-center  w-full md:text-start">
           <span className="text-[#ff6b4a]">{"{"}</span>{" NOSSO PROCESSO "}<span className="text-[#ff6b4a]">{"}"}</span>
         </p>
         <div className="flex  items-center w-full gap-6 justify-center md:justify-start">
@@ -54,7 +53,7 @@ export default function Steps() {
           <hr className="flex-1 border-gray-200 hidden md:block" />
         </div>
 
-        <p className="max-w-xl text-center md:text-start text-sm mt-4 md:text-base   text-gray-500 ">
+        <p className="max-w-xl  px-2  text-center md:text-start text-sm mt-4 md:text-base   text-gray-500 ">
           Planejamos, desenvolvemos e entregamos soluções digitais sob medida,
           do primeiro conceito ao produto final. .
         </p>

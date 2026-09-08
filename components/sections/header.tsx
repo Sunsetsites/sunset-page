@@ -17,15 +17,15 @@ export function Header() {
       <header className="absolute inset-x-0 top-0 z-50  hidden border-b border-black/8  text-[#171719]  backdrop-blur-xl lg:block">
         <div className="mx-auto max-w-[1600px] flex h-20 w-full items-center justify-between gap-8 px-5 sm:px-8 lg:px-12">
           <a href="#grid" className="group flex items-center gap-3 text-sm font-semibold tracking-tight">
-            <img
+            {/* <img
               src="/logo.png"
               alt=""
               className="h-8 w-8 object-contain transition-transform duration-300 group-hover:rotate-12"
               width={32}
               height={32}
-            />
+            /> */}
             <span className="text-sm capitalize tracking-widest">
-              sunset<span className="text-[#ff6b4a]">.</span>
+              sunset<span className="text-[#ff6b4a]"> .</span>
             </span>
           </a>
 

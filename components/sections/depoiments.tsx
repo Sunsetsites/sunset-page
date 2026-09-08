@@ -35,7 +35,7 @@ export function Depoiments() {
     {
       name: "Gustavo Oliveira",
       role: "Empresário",
-      text: "Foram muito atenciosos e compreensivos durante toda a construção do meu ecommerce. O resultado final superou minhas expectativas.",
+      text: "Foram muito atenciosos e compreensivos durante toda a construção do meu ecommerce"
     },
   ];
   return (
