@@ -25,7 +25,7 @@ export function Hero() {
         <p className="text-[10px] uppercase tracking-[0.24em] sm:text-xs sm:tracking-widest">
           <span className="text-[#ff6b4a]">{"{"}</span>{" DIGITAL INNOVATION "}<span className="text-[#ff6b4a]">{"}"}</span>
         </p>
-        <h1 className="max-w-4xl ] uppercase leading-10 text-3xl  md:text-5xl md:leading-tight">
+        <h1 className="max-w-4xl ] uppercase leading-10 text-3xl  md:text-5xl md:leading-16">
           Seu negócio merece uma presença digital à altura.
         </h1>
 
