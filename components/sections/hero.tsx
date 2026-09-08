@@ -34,11 +34,11 @@ export function Hero() {
          Sistemas sob medida para empresas que precisam vender melhor,automatizar processos ou lançar uma nova operação digital
         </p>
         <div className="flex-col mt-2 flex w-full items-center justify-center text-sm sm:mt-4 gap-4 md:flex-row md:gap-10">
-          <button className="inline-flex min-h-12 w-full max-w-xs cursor-pointer items-center justify-center gap-2 rounded-md bg-primary-color px-5 py-3 font-medium text-white transition-all duration-300 hover:shadow-2xl sm:w-auto">
+          <button className="inline-flex min-h-12 w-full max-w-xs cursor-pointer items-center justify-center gap-2 rounded-full bg-primary-color px-5 py-3 font-medium text-white transition-all duration-300 hover:shadow-2xl sm:w-auto ">
             Comece seu projeto
             <ArrowUpRight size={16} strokeWidth={1.8} aria-hidden="true" />
           </button>
-          <button className="inline-flex cursor-pointer items-center gap-2 rounded-md p-3 px-4 font-medium text-gray-400 transition-all duration-200 ease-in hover:bg-primary-color hover:text-white hover:shadow-2xl">
+          <button className="inline-flex  cursor-pointer items-center gap-2  p-3 px-4 font-medium text-gray-400 transition-all duration-200 ease-in  hover:text-primary-color">
             Soluções sob medida
           
           </button>
