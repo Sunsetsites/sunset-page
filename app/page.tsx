@@ -13,27 +13,31 @@ import { projectWhatsAppLink } from "@/lib/contact";
 export default function Home() {
   return (
     <main>
-      <Header />
+      {/* <Header /> */}
       <Hero />
-      <div id="servicos" className=" bg-primary-color lg:[clip-path:polygon(0_0,45%_0,60%_80px,100%_80px,100%_100%,0_100%)] text-white  py-20 md:py-30 justify-center flex items-center flex-col relative">
-        <Services />
-      </div>
+
+      <Services />
+
       <div id="processo">
         <Steps />
       </div>
       <Depoiments />
       <Faq />
 
-      <section id="contato" className="cta-section px-4  md:px-10 2xl:px-30 text-center flex justify-center items-center  ">
+      <section
+        id="contato"
+        className="cta-section px-4  md:px-10 2xl:px-30 text-center flex justify-center items-center  "
+      >
         <div className="relative overflow-hidden py-28 w-full flex justify-center items-center ">
           <div className="cta-grid" />
           <div className="relative z-10 md:max-w-xl flex justify-center items-center flex-col gap-6">
             {/* <SectionLabel no="09">Próximo passo</SectionLabel> */}
             <h2 className="text-3xl md:text-4xl  md:leading-12 ">
-             Pronto para levar seu negócio mais longe?
+              Pronto para levar seu negócio mais longe?
             </h2>
             <p className="mt-2 max-w-xl text-sm md:text-lg text-center  text-gray-700">
-             Conte um pouco sobre o seu negócio. A gente desenvolve um caminho possível — e uma ideia de como ele pode ficar.
+              Conte um pouco sobre o seu negócio. A gente desenvolve um caminho
+              possível — e uma ideia de como ele pode ficar.
             </p>
             <a
               href={projectWhatsAppLink}

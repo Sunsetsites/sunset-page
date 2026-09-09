@@ -119,37 +119,39 @@ export default function Services() {
   ];
 
   return (
-    <div className="relative w-full flex flex-col px-2 md:px-10 2xl:px-20 max-w-[1700px]">
-      <div className="flex  flex-col gap-4 ">
-        <p className="uppercase tracking-widest 2 ml-2 text-xs text-center md:text-start">
-          <span className="text-[#ff6b4a]">{"{"}</span>{" Soluções digitais "}<span className="text-[#ff6b4a]">{"}"}</span>
-        </p>
-        <div className="flex justify-center md:justify-start items-center gap-10">
-          <h2 className="text-center text-2xl font-medium md:text-start lg:text-4xl lg:leading-14  ">
-            <ShinyText
-              text="Tecnologias e Soluções"
-              speed={2}
-              delay={0}
-              color="#ffffff"
-              shineColor="#b5b5b5"
-              spread={120}
-              direction="left"
-              yoyo={false}
-              pauseOnHover={false}
-              disabled={false}
-            />
-          </h2>
-
-          <hr className="flex-1 border-white/10 hidden md:block" />
+    <section
+      className=" bg-primary-color items-center justify-center relative w-full flex flex-col px-2 py-20 md:py-30"
+    >
+      
+      <div className="flex flex-col  md:gap-20 2xl:px-10 max-w-[1700px] w-full mx-auto">
+        <div className="flex  flex-col gap-4 ">
+          <p className="uppercase tracking-widest 2 ml-2 text-xs text-center md:text-start text-white">
+            <span className="text-[#ff6b4a]">{"{"}</span>
+            {" Soluções digitais "}
+            <span className="text-[#ff6b4a]">{"}"}</span>
+          </p>
+          <div className="flex justify-center md:justify-start items-center gap-10">
+            <h2 className="text-center text-2xl font-medium md:text-start lg:text-4xl lg:leading-14  ">
+              <ShinyText
+                text="Tecnologias e Soluções"
+                speed={2}
+                delay={0}
+                color="#ffffff"
+                shineColor="#b5b5b5"
+                spread={120}
+                direction="left"
+                yoyo={false}
+                pauseOnHover={false}
+                disabled={false}
+              />
+            </h2>
+            <hr className="flex-1 border-white/10 hidden md:block" />
+          </div>
+          <p className="max-w-xl px-5 text-center md:text-start text-gray-300 text-sm md:text-base  font-light ">
+            Desenvolvemos soluções digitais sob medida que unem tecnologia e
+            inovação para transformar ideias em resultados reais.
+          </p>
         </div>
-
-        <p className="max-w-xl px-5 text-center md:text-start text-gray-300 text-sm md:text-base  font-light ">
-          Desenvolvemos soluções digitais sob medida que unem tecnologia e
-          inovação para transformar ideias em resultados reais.
-        </p>
-      </div>
-
-   
         <div className="px-4">
           <Swipper
             loop={false}
@@ -175,16 +177,13 @@ export default function Services() {
           >
             {serviceCards.map((card, index) => (
               <SwiperSlide key={index} className={`h-auto slide-${index}`}>
-                <div
-                  className="group card-service h-97.5! md:h-120! bg-white/3 border p-8 border-neutral-800 rounded-2xl"
-          
-                >
+                <div className="group card-service h-97.5! md:h-120! bg-white/3 border p-8 border-neutral-800 rounded-2xl">
                   <div className=" flex  flex-col gap-5 justify-between h-full">
                     <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-white/5 text-white transition group-hover:bg-primary-color group-hover:duration-300">
                       {card.icon}
                     </div>
                     <div className="flex flex-col justify-center gap-3">
-                      <h3 className="text-md font-medium uppercase">
+                      <h3 className="text-md font-medium uppercase text-white">
                         <TextType
                           text={card.title}
                           typingSpeed={75}
@@ -202,7 +201,9 @@ export default function Services() {
                         href={projectWhatsAppLink}
                         className="mt-10 flex flex-1 items-center justify-center gap-2 rounded-full bg-white p-3 px-10 text-center text-sm font-medium text-black "
                       >
-                        <span className="text-sm font-medium text-black shrink-0">Começar meu projeto</span>
+                        <span className="text-sm font-medium text-black shrink-0">
+                          Começar meu projeto
+                        </span>
                         <span aria-hidden="true">↗</span>
                       </a>
                     </div>
@@ -212,58 +213,59 @@ export default function Services() {
             ))}
           </Swipper>
         </div>
-    
-
-      <div className="mt-15 flex w-full flex-col gap-6 md:flex-row md:items-center 2xl:px-10">
-        <p className="shrink-0 uppercase tracking-widest ml-2 text-xs text-center md:text-start">
-          <span className="text-[#ff6b4a]">{"{"}</span>{" Tecnologias utilizadas "}<span className="text-[#ff6b4a]">{"}"}</span>
-        </p>
-        <LogoLoop
-          logos={tecnologias}
-          speed={80}
-          direction="left"
-          logoHeight={36}
-          gap={18}
-          pauseOnHover={false}
-          hoverSpeed={0}
-          scaleOnHover
-          fadeOut
-          fadeOutColor="#141414"
-          className="min-w-0 flex-1"
-          ariaLabel="Tecnologias que usamos"
-          renderItem={(item, key) => {
-            const tech = item as {
-              src?: string;
-              alt?: string;
-              name?: string;
-              title?: string;
-              width?: number;
-              height?: number;
-            };
-
-            return (
-              <div
-                key={key}
-                className="flex items-center gap-3  
-                 px-4 py-2 text-sm font-medium text-white "
-              >
-                <img
-                  src={tech.src}
-                  alt={tech.alt ?? tech.name ?? tech.title ?? "Tecnologia"}
-                  title={tech.title ?? tech.name ?? tech.alt ?? "Tecnologia"}
-                  width={tech.width ?? 26}
-                  height={tech.height ?? 26}
-                  className="h-6 w-6 object-contain"
-                  loading="lazy"
-                />
-                <span>
-                  {tech.name ?? tech.alt ?? tech.title ?? "Tecnologia"}
-                </span>
-              </div>
-            );
-          }}
-        />
+        <div className="mt-15 flex w-full flex-col gap-6 md:flex-row md:items-center 2xl:px-10">
+          <p className="shrink-0 uppercase tracking-widest ml-2 text-xs text-center md:text-start text-white">
+            <span className="text-[#ff6b4a]">{"{"}</span>
+            {" Tecnologias utilizadas "}
+            <span className="text-[#ff6b4a]">{"}"}</span>
+          </p>
+          <LogoLoop
+            logos={tecnologias}
+            speed={80}
+            direction="left"
+            logoHeight={36}
+            gap={18}
+            pauseOnHover={false}
+            hoverSpeed={0}
+            scaleOnHover
+            fadeOut
+            fadeOutColor="#141414"
+            className="min-w-0 flex-1"
+            ariaLabel="Tecnologias que usamos"
+            renderItem={(item, key) => {
+              const tech = item as {
+                src?: string;
+                alt?: string;
+                name?: string;
+                title?: string;
+                width?: number;
+                height?: number;
+              };
+              return (
+                <div
+                  key={key}
+                  className="flex items-center gap-3
+                   px-4 py-2 text-sm font-medium text-white "
+                >
+                  <img
+                    src={tech.src}
+                    alt={tech.alt ?? tech.name ?? tech.title ?? "Tecnologia"}
+                    title={tech.title ?? tech.name ?? tech.alt ?? "Tecnologia"}
+                    width={tech.width ?? 26}
+                    height={tech.height ?? 26}
+                    className="h-6 w-6 object-contain"
+                    loading="lazy"
+                  />
+                  <span>
+                    {tech.name ?? tech.alt ?? tech.title ?? "Tecnologia"}
+                  </span>
+                </div>
+              );
+            }}
+          />
+        </div>
       </div>
-    </div>
+      
+    </section>
   );
 }
