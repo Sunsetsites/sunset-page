@@ -1,6 +1,7 @@
 import React, { useCallback, useLayoutEffect, useRef, useState } from 'react';
 import { gsap } from 'gsap';
 import { AtSign, Globe, Menu, X } from 'lucide-react';
+import { projectWhatsAppLink } from '@/lib/contact';
 
 export interface StaggeredMenuItem {
   label: string;
@@ -519,7 +520,7 @@ export const StaggeredMenu: React.FC<StaggeredMenuProps> = ({
                 <p className="sm-contact-copy">
                   Conte seu projeto e descubra como podemos transformar ideias em soluções inteligentes.
                 </p>
-                <a className="sm-contact-link" href="#contato" onClick={closeMenu}>
+                <a className="sm-contact-link" href={projectWhatsAppLink} onClick={closeMenu}>
                   Começar Projeto
                   <span aria-hidden="true">↗</span>
                 </a>

@@ -5,6 +5,7 @@ import SpotlightCard from "../ui/SpotlightCard";
 import Swipper from "../ui/swipper";
 import { SwiperSlide } from "swiper/react";
 import TextType from "../ui/TextType";
+import { projectWhatsAppLink } from "@/lib/contact";
 
 export default function Services() {
   const tecnologias = [
@@ -198,7 +199,7 @@ export default function Services() {
                         {card.description}
                       </p>
                       <a
-                        href="#contato"
+                        href={projectWhatsAppLink}
                         className="mt-10 flex flex-1 items-center justify-center gap-2 rounded-full bg-white p-3 px-10 text-center text-sm font-medium text-black "
                       >
                         <span className="text-sm font-medium text-black shrink-0">Começar meu projeto</span>

@@ -1,5 +1,6 @@
 import { ArrowUpRight } from "lucide-react";
 import { useRef, type MouseEvent } from "react";
+import { projectWhatsAppLink } from "@/lib/contact";
 
 export function Hero() {
   const gridRef = useRef<HTMLElement>(null);
@@ -21,7 +22,7 @@ export function Hero() {
     >
       <div  aria-hidden="true" />
 
-      <div className="relative flex w-full max-w-4xl flex-col  gap-6 md:gap-12 text-center ">
+      <div className="relative flex w-full max-w-4xl flex-col  gap-6 md:gap-12 text-center  justify-center items-center">
         <p className="text-[10px] uppercase tracking-[0.24em] sm:text-xs sm:tracking-widest">
           <span className="text-[#ff6b4a]">{"{"}</span>{" DIGITAL INNOVATION "}<span className="text-[#ff6b4a]">{"}"}</span>
         </p>
@@ -30,14 +31,14 @@ export function Hero() {
         </h1>
 
   
-        <p className="max-w-2xl px-2 text-sm leading-6 text-gray-700 sm:px-6 sm:text-base sm:leading-7">
+        <p className="text-center max-w-2xl px-2 text-sm leading-6 text-gray-700 sm:px-6 sm:text-base sm:leading-7">
          Sistemas sob medida para empresas que precisam vender melhor,automatizar processos ou lançar uma nova operação digital
         </p>
         <div className="flex-col mt-2 flex w-full items-center justify-center text-sm sm:mt-4 gap-4 md:flex-row md:gap-10">
-          <button className="inline-flex min-h-12 w-full max-w-xs cursor-pointer items-center justify-center gap-2 rounded-full bg-primary-color px-5 py-3 font-medium text-white transition-all duration-300 hover:shadow-2xl sm:w-auto ">
+          <a href={projectWhatsAppLink} className="inline-flex min-h-12 w-full max-w-xs cursor-pointer items-center justify-center gap-2 rounded-full bg-primary-color px-5 py-3 font-medium text-white transition-all duration-300 hover:shadow-2xl sm:w-auto ">
             Comece seu projeto
             <ArrowUpRight size={16} strokeWidth={1.8} aria-hidden="true" />
-          </button>
+          </a>
           <button className="inline-flex  cursor-pointer items-center gap-2  p-3 px-4 font-medium text-gray-400 transition-all duration-200 ease-in  hover:text-primary-color">
             Soluções sob medida
           

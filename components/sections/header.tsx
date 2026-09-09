@@ -2,6 +2,7 @@
 
 import { ArrowUpRight } from "lucide-react";
 import StaggeredMenu from "@/components/StaggeredMenu";
+import { projectWhatsAppLink } from "@/lib/contact";
 
 const links = [
   { label: "Início", ariaLabel: "Ir para o início", link: "#grid" },
@@ -43,10 +44,10 @@ export function Header() {
             ))}
           </nav>
 
-          <button className="text-xs  bg-primary-color  text-white font-semibold py-3 px-4 rounded-full transition-colors duration-300 flex items-center gap-2 justify-center cursor-pointer hover:shadow-2xl">
+          <a href={projectWhatsAppLink} className="text-xs  bg-primary-color  text-white font-semibold py-3 px-4 rounded-full transition-colors duration-300 flex items-center gap-2 justify-center cursor-pointer hover:shadow-2xl">
             Comece seu projeto
             <ArrowUpRight size={16} strokeWidth={1.8} aria-hidden="true" />
-          </button>
+          </a>
         </div>
       </header>
 

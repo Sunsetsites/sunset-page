@@ -8,6 +8,7 @@ import Steps from "@/components/sections/steps";
 import Threads from "@/components/ui/Threads";
 import { MessageCircle } from "lucide-react";
 import Faq from "@/components/sections/faq";
+import { projectWhatsAppLink } from "@/lib/contact";
 
 export default function Home() {
   return (
@@ -35,9 +36,7 @@ export default function Home() {
              Conte um pouco sobre o seu negócio. A gente desenvolve um caminho possível — e uma ideia de como ele pode ficar.
             </p>
             <a
-              href={
-                "https://api.whatsapp.com/send?phone=5511999999999&text=Ol%C3%A1%2C%20gostaria%20de%20solicitar%20um%20site."
-              }
+              href={projectWhatsAppLink}
               className="mt-5 inline-flex items-center gap-3 rounded-full bg-primary-color text-white px-7 py-4 text-sm font-bold transition hover:-translate-y-1 hover:bg-cobalt"
             >
               Começar meu projeto <MessageCircle size={17} />
