@@ -32,7 +32,7 @@ export default function Home() {
             <h2 className="text-3xl md:text-4xl  md:leading-12 ">
              Pronto para levar seu negócio mais longe?
             </h2>
-            <p className="mt-2 max-w-xl text-sm md:text-lg text-center leading-8 text-gray-700">
+            <p className="mt-2 max-w-xl text-sm md:text-lg text-center  text-gray-700">
              Conte um pouco sobre o seu negócio. A gente desenvolve um caminho possível — e uma ideia de como ele pode ficar.
             </p>
             <a
