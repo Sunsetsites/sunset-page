@@ -146,9 +146,9 @@ export default function Services() {
                 disabled={false}
               />
             </h2>
-            <hr className="flex-1 border-white/10 hidden md:block" />
+           
           </div>
-          <p className="max-w-xl px-5 text-center md:text-start text-gray-300 text-sm md:text-base  font-light ">
+          <p className="max-w-xl px-5 text-center md:text-start -ml-2 text-gray-300 text-sm md:text-base  ">
             Desenvolvemos soluções digitais sob medida que unem tecnologia e
             inovação para transformar ideias em resultados reais.
           </p>
