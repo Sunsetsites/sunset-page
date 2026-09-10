@@ -41,6 +41,7 @@ export function Depoiments() {
   return (
     <div
       className={`relative overflow-hidden bg-primary-color lg:[clip-path:polygon(0_0,45%_0,60%_80px,100%_80px,100%_100%,0_100%)] text-white pt-20 md:pt-40 pb-20  flex  ${largura < 1300 ? "flex-col" : "flex-row"} justify-between mt-20 px-4 md:px-10  2xl:px-45`}
+      id="grid"
     >
       <div className="relative z-10 flex gap-6  flex-col w-full justify-center md:justify-start  lg:max-w-lg">
          <p className="uppercase tracking-widest  ml-2 text-center md:text-start text-xs ">

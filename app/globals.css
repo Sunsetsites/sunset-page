@@ -134,27 +134,8 @@ h3 {
   background-size: 60px 60px;
 }
 
-#grid::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  background-image:
-    linear-gradient(to right, rgba(255, 255, 255, 0.16) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(255, 255, 255, 0.16) 1px, transparent 1px);
-  background-size: 60px 60px;
-  mask-image: radial-gradient(
-    circle 150px at var(--mouse-x) var(--mouse-y),
-    black,
-    transparent
-  );
-  opacity: 0;
-  transition: opacity 200ms ease;
-}
 
-#grid:hover::before {
-  opacity: 1;
-}
+
 
 .hero-glow {
   position: absolute;
