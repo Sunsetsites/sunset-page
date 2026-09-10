@@ -1,2 +1,8 @@
-export const projectWhatsAppLink =
-  "https://wa.me/5511967525037?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20de%20como%20construir%20meu%20site";
+const projectEmail = "sunsetttech@gmail.com";
+const projectEmailSubject = "Quero iniciar um projeto digital";
+const projectEmailBody = `Olá!
+Gostaria de conversar sobre um projeto para minha empresa.
+
+Aguardo o retorno para alinharmos os próximos passos.`;
+
+export const projectWhatsAppLink = `mailto:${projectEmail}?subject=${encodeURIComponent(projectEmailSubject)}&body=${encodeURIComponent(projectEmailBody)}`;
