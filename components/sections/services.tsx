@@ -200,7 +200,7 @@ export default function Services() {
                       </p>
                       <a
                         href={projectWhatsAppLink}
-                        className="mt-10 flex flex-1 items-center justify-center gap-2 rounded-full bg-white p-3 px-10 text-center text-sm font-medium text-black "
+                        className="mt-10 flex flex-1 items-center justify-center gap-2 rounded-full bg-white/90  hover:bg-white p-3 px-10 text-center text-sm font-medium text-black "
                       >
                         <span className="text-sm font-medium text-black shrink-0">
                           Começar meu projeto

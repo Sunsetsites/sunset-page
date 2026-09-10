@@ -54,7 +54,7 @@ export function Hero() {
         <div className="flex-col mt-2 flex w-full items-center justify-center text-sm sm:mt-4 gap-4 md:flex-row md:gap-10">
           <a
             href={projectWhatsAppLink}
-            className="inline-flex min-h-12 w-full max-w-xs cursor-pointer items-center justify-center gap-2 rounded-full bg-white/80 px-5 py-3 font-medium text-black transition-all duration-300 hover:shadow-2xl sm:w-auto "
+            className="inline-flex min-h-12 w-full max-w-xs cursor-pointer items-center justify-center gap-2 rounded-full bg-white/80 hover:bg-white px-5 py-3 font-medium text-black transition-all duration-300 hover:shadow-2xl sm:w-auto "
           >
             Comece seu projeto agora
             <ArrowUpRight size={16} strokeWidth={1.8} aria-hidden="true" />
