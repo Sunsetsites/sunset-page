@@ -120,7 +120,8 @@ export default function Services() {
 
   return (
     <section
-      className=" bg-primary-color items-center justify-center relative w-full flex flex-col px-2 py-20 md:py-30"
+      className=" bg-primary-color items-center justify-center relative w-full flex flex-col px-2 py-20 md:py-30 md:px-10"
+      id="grid"
     >
       
       <div className="flex flex-col  md:gap-20 2xl:px-10 max-w-[1700px] w-full mx-auto">

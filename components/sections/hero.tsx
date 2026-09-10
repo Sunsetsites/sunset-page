@@ -16,7 +16,7 @@ export function Hero() {
   }
   return (
     <section
-      className=" relative flex min-h-svh items-center justify-center overflow-hidden"
+      className=" relative flex min-h-svh items-center justify-center overflow-hidden "
       id="grid"
       ref={gridRef}
       onMouseMove={handleGridMouseMove}

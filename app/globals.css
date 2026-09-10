@@ -120,6 +120,41 @@ h3 {
     linear-gradient(90deg, rgba(23, 34, 59, 0.23) 1px, transparent 1px);
 }
 
+#grid{
+  --grid-opacity: 0.01;
+  --mouse-x: 50%;
+  --mouse-y: 50%;
+  position: relative;
+  overflow: hidden;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  background-color: #141414;
+  background-image:
+    linear-gradient(to right, rgba(255, 255, 255, var(--grid-opacity)) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, var(--grid-opacity)) 1px, transparent 1px);
+  background-size: 400px 400px;
+}
+
+#grid::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    linear-gradient(to right, rgba(255, 255, 255, 0.16) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.16) 1px, transparent 1px);
+  background-size: 400px 400px;
+  mask-image: radial-gradient(
+    circle 150px at var(--mouse-x) var(--mouse-y),
+    black,
+    transparent
+  );
+  opacity: 0;
+  transition: opacity 200ms ease;
+}
+
+#grid:hover::before {
+  opacity: 1;
+}
 
 .hero-glow {
   position: absolute;
